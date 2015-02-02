@@ -1,0 +1,703 @@
+// !$*UTF8*$!
+{
+       archiveVersion = 1;
+       classes = {
+       };
+       objectVersion = 46;
+       objects = {
+
+/* Begin PBXAggregateTarget section */
+              FB746C528C474223A98569B3 /* ALL_BUILD */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 0A6125E5ACF640FE9824F5E4 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+                     buildPhases = (
+                            FAC8B1DBEF2348FC94F2B0F6 /* CMake Rules */,
+                     );
+                     dependencies = (
+                            8AA00F835D0B428A9444035E /* PBXTargetDependency */,
+                            414AB0C2E4A243A6B58DB07C /* PBXTargetDependency */,
+                     );
+                     name = ALL_BUILD;
+                     productName = ALL_BUILD;
+              };
+              220D3C96B7004C6AA3738E43 /* ZERO_CHECK */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = C8F45D21E9F04D5597E126FB /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+                     buildPhases = (
+                            9A05D7D9A1B84101B966E28E /* CMake Rules */,
+                     );
+                     dependencies = (
+                     );
+                     name = ZERO_CHECK;
+                     productName = ZERO_CHECK;
+              };
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+1DB5F8E94FA74FF0974B0AF2 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = B2DEBFE8E0424B3ABCABAFAF /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
+A8193DC8A6014184A80BCAE2 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/HexNut.cpp */ = {isa = PBXBuildFile; fileRef = 3E651D20500E44549A43A00D /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/HexNut.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+7146320EDB1044FC8B769013 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/Sphere.cpp */ = {isa = PBXBuildFile; fileRef = 418AAE7BB9AB45088EF59453 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/Sphere.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+F866C2272BF74412BC0B4D79 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/main.cpp */ = {isa = PBXBuildFile; fileRef = FD1DBD1465474C14827F5365 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/main.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+              A91B7B54541F4283898C714C /*  */ = {
+                     isa = PBXBuildStyle;
+              };
+              7A9C62E52E7E4DA6B6210B37 /* Debug */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Debug;
+              };
+              78F4BF385EE340E28532FD09 /* Release */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Release;
+              };
+              610CA1BD4DF943CF9E15D5CC /* MinSizeRel */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = MinSizeRel;
+              };
+              E3B7F0FA648E41729BC09D77 /* RelWithDebInfo */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = RelWithDebInfo;
+              };
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+              03DFB0C283A3428F975BAF93 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 4F5CF8741E7B47418BAC689E /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 220D3C96B7004C6AA3738E43;
+                     remoteInfo = ZERO_CHECK;
+              };
+              BE0821DFC8C64769B63C157C /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 4F5CF8741E7B47418BAC689E /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 215199F6784D4FFFB88096D9;
+                     remoteInfo = sample;
+              };
+              927A0C47A5654BB1BDBE8BF0 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 4F5CF8741E7B47418BAC689E /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 220D3C96B7004C6AA3738E43;
+                     remoteInfo = ZERO_CHECK;
+              };
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+09A13EA999DD4840A4B1C24A /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+6C3A807F7E934A9B89A00B5D /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+B2DEBFE8E0424B3ABCABAFAF /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+3E651D20500E44549A43A00D /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/HexNut.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "HexNut.cpp"; path = "HexNut.cpp"; sourceTree = SOURCE_ROOT; };
+418AAE7BB9AB45088EF59453 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/Sphere.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "Sphere.cpp"; path = "Sphere.cpp"; sourceTree = SOURCE_ROOT; };
+FD1DBD1465474C14827F5365 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/main.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "main.cpp"; path = "main.cpp"; sourceTree = SOURCE_ROOT; };
+74140DDD117140948825D9B7 /* sample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = sample; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+              0FDBF35C9347432B9E5F1BEB  = {
+                     isa = PBXGroup;
+                     children = (
+                            69C224554B5F4D08A3355E28 /* Sources */,
+                            151B1BDED96641DD963E6100 /* Resources */,
+                            11A3CF5276B14F018FD1C6D1 /* Products */,
+                     );
+                     sourceTree = "<group>";
+              };
+              69C224554B5F4D08A3355E28 /* Sources */ = {
+                     isa = PBXGroup;
+                     children = (
+                            13436F6D98A24251B4FB8D23 /* ALL_BUILD */,
+                            00C8A2FF7BC94FA1888D427F /* sample */,
+                            ACCDA713378E44B383454938 /* ZERO_CHECK */,
+                     );
+                     name = Sources;
+                     sourceTree = "<group>";
+              };
+              151B1BDED96641DD963E6100 /* Resources */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = Resources;
+                     sourceTree = "<group>";
+              };
+              13436F6D98A24251B4FB8D23 /* ALL_BUILD */ = {
+                     isa = PBXGroup;
+                     children = (
+                            535678DAA43F478A824AC935 /* CMake Rules */,
+                            09A13EA999DD4840A4B1C24A /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeLists.txt */,
+                     );
+                     name = ALL_BUILD;
+                     sourceTree = "<group>";
+              };
+              535678DAA43F478A824AC935 /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              00C8A2FF7BC94FA1888D427F /* sample */ = {
+                     isa = PBXGroup;
+                     children = (
+                            B0D531A222AF408FA43F406B /* Source Files */,
+                            B2DEBFE8E0424B3ABCABAFAF /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeLists.txt */,
+                     );
+                     name = sample;
+                     sourceTree = "<group>";
+              };
+              B0D531A222AF408FA43F406B /* Source Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            3E651D20500E44549A43A00D /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/HexNut.cpp */,
+                            418AAE7BB9AB45088EF59453 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/Sphere.cpp */,
+                            FD1DBD1465474C14827F5365 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/main.cpp */,
+                     );
+                     name = "Source Files";
+                     sourceTree = "<group>";
+              };
+              ACCDA713378E44B383454938 /* ZERO_CHECK */ = {
+                     isa = PBXGroup;
+                     children = (
+                            1CBA3E42AFBA47D581AE95C2 /* CMake Rules */,
+                            6C3A807F7E934A9B89A00B5D /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeLists.txt */,
+                     );
+                     name = ZERO_CHECK;
+                     sourceTree = "<group>";
+              };
+              1CBA3E42AFBA47D581AE95C2 /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              11A3CF5276B14F018FD1C6D1 /* Products */ = {
+                     isa = PBXGroup;
+                     children = (
+                            74140DDD117140948825D9B7 /* sample */,
+                     );
+                     name = Products;
+                     sourceTree = "<group>";
+              };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+              215199F6784D4FFFB88096D9 /* sample */ = {
+                     isa = PBXNativeTarget;
+                     buildConfigurationList = 6CBCD4D2EB4441F9B2682ABA /* Build configuration list for PBXNativeTarget "sample" */;
+                     buildPhases = (
+                            33E5FF966F08499EB6A3FF75 /* Sources */,
+                     );
+                     buildRules = (
+                     );
+                     dependencies = (
+                            BA18D70118334724AB6C9AC5 /* PBXTargetDependency */,
+                     );
+                     name = sample;
+                     productName = sample;
+                     productReference = 74140DDD117140948825D9B7 /* sample */;
+                     productType = "com.apple.product-type.tool";
+              };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+              4F5CF8741E7B47418BAC689E /* Project object */ = {
+                     isa = PBXProject;
+                     attributes = {
+                            BuildIndependentTargetsInParallel = YES;
+                     };
+                     buildConfigurationList = 7A09FB5D70CC4EBE8C3D5D52 /* Build configuration list for PBXProject  "sample" */;
+                     buildSettings = {
+                     };
+                     buildStyles = (
+                            7A9C62E52E7E4DA6B6210B37 /* Debug */,
+                            78F4BF385EE340E28532FD09 /* Release */,
+                            610CA1BD4DF943CF9E15D5CC /* MinSizeRel */,
+                            E3B7F0FA648E41729BC09D77 /* RelWithDebInfo */,
+                     );
+                     compatibilityVersion = "Xcode 3.2";
+                     hasScannedForEncodings = 0;
+                     mainGroup = 0FDBF35C9347432B9E5F1BEB;
+                     projectDirPath = ".";
+                     projectRoot = "";
+                     targets = (
+                            FB746C528C474223A98569B3 /* ALL_BUILD */,
+                            220D3C96B7004C6AA3738E43 /* ZERO_CHECK */,
+                            215199F6784D4FFFB88096D9 /* sample */,
+                     );
+              };
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+              CC03FCE2E5E14E67B7192D85 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              FAC8B1DBEF2348FC94F2B0F6 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake -f /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              442F46AB49BD411F96B75152 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              9A05D7D9A1B84101B966E28E /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake -f /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+              33E5FF966F08499EB6A3FF75 /* Sources */ = {
+                     isa = PBXSourcesBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                            A8193DC8A6014184A80BCAE2 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/HexNut.cpp */,
+                            7146320EDB1044FC8B769013 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/Sphere.cpp */,
+                            F866C2272BF74412BC0B4D79 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/main.cpp */,
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+              };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+              8AA00F835D0B428A9444035E /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 220D3C96B7004C6AA3738E43 /* ZERO_CHECK */;
+                     targetProxy = 03DFB0C283A3428F975BAF93 /* PBXContainerItemProxy */;
+              };
+              414AB0C2E4A243A6B58DB07C /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 215199F6784D4FFFB88096D9 /* sample */;
+                     targetProxy = BE0821DFC8C64769B63C157C /* PBXContainerItemProxy */;
+              };
+              BA18D70118334724AB6C9AC5 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 220D3C96B7004C6AA3738E43 /* ZERO_CHECK */;
+                     targetProxy = 927A0C47A5654BB1BDBE8BF0 /* PBXContainerItemProxy */;
+              };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+              CCF3AB9885094C449A8C80C6 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk";
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/build;
+                     };
+                     name = Debug;
+              };
+              0104EF0976B54F4AA10F80FC /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk";
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/build;
+                     };
+                     name = Release;
+              };
+              3225F82AA41D4D09A5305382 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk";
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/build;
+                     };
+                     name = MinSizeRel;
+              };
+              646CE2926CD84911884ACCD8 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+                            ONLY_ACTIVE_ARCH = YES;
+                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk";
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/build;
+                     };
+                     name = RelWithDebInfo;
+              };
+              B8AB7B160E1645C6B0ACBB78 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              DDF8256994FB4396B126AC45 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              C75B300775844FE1A8065EB2 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              47B49A0C7CEA47C4992D747D /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+              095149825B734EFBA650A945 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              703F9AF77B4349CD80029707 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              6C3D827C352B46B3B1BF446A /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              16599C261AEA4BCB8E11ECD8 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+              1C83E862C5764BF2B23C389B /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            LIBRARY_SEARCH_PATHS = "";
+                            OTHER_CFLAGS = "    ";
+                            OTHER_CPLUSPLUSFLAGS = " -std=c++11     ";
+                            OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /usr/local/lib/libglfw3.a -framework AGL -framework OpenGL -framework Cocoa -framework CoreVideo -framework IOKit /usr/local/lib/libGLEW.dylib -framework AGL -framework OpenGL /usr/local/lib/libglfw3.a /usr/local/lib/libGLEW.dylib -framework Cocoa -framework CoreVideo -framework IOKit";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = sample;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              3A1AB040A9E84D04AA4DEC59 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 3;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            LIBRARY_SEARCH_PATHS = "";
+                            OTHER_CFLAGS = "    -DNDEBUG  ";
+                            OTHER_CPLUSPLUSFLAGS = " -std=c++11     -DNDEBUG  ";
+                            OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /usr/local/lib/libglfw3.a -framework AGL -framework OpenGL -framework Cocoa -framework CoreVideo -framework IOKit /usr/local/lib/libGLEW.dylib -framework AGL -framework OpenGL /usr/local/lib/libglfw3.a /usr/local/lib/libGLEW.dylib -framework Cocoa -framework CoreVideo -framework IOKit";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = sample;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              C52740CAA49B4785A25DA5D2 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = s;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            LIBRARY_SEARCH_PATHS = "";
+                            OTHER_CFLAGS = "    -DNDEBUG  ";
+                            OTHER_CPLUSPLUSFLAGS = " -std=c++11     -DNDEBUG  ";
+                            OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /usr/local/lib/libglfw3.a -framework AGL -framework OpenGL -framework Cocoa -framework CoreVideo -framework IOKit /usr/local/lib/libGLEW.dylib -framework AGL -framework OpenGL /usr/local/lib/libglfw3.a /usr/local/lib/libGLEW.dylib -framework Cocoa -framework CoreVideo -framework IOKit";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = sample;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              7DBDB033AB8C470584416A8D /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            EXECUTABLE_PREFIX = "";
+                            EXECUTABLE_SUFFIX = "";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 2;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            LIBRARY_SEARCH_PATHS = "";
+                            OTHER_CFLAGS = "       -DNDEBUG  ";
+                            OTHER_CPLUSPLUSFLAGS = " -std=c++11        -DNDEBUG  ";
+                            OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  /usr/local/lib/libglfw3.a -framework AGL -framework OpenGL -framework Cocoa -framework CoreVideo -framework IOKit /usr/local/lib/libGLEW.dylib -framework AGL -framework OpenGL /usr/local/lib/libglfw3.a /usr/local/lib/libGLEW.dylib -framework Cocoa -framework CoreVideo -framework IOKit";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = sample;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+              7A09FB5D70CC4EBE8C3D5D52 /* Build configuration list for PBXProject  "sample" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            CCF3AB9885094C449A8C80C6 /* Debug */,
+                            0104EF0976B54F4AA10F80FC /* Release */,
+                            3225F82AA41D4D09A5305382 /* MinSizeRel */,
+                            646CE2926CD84911884ACCD8 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              0A6125E5ACF640FE9824F5E4 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            B8AB7B160E1645C6B0ACBB78 /* Debug */,
+                            DDF8256994FB4396B126AC45 /* Release */,
+                            C75B300775844FE1A8065EB2 /* MinSizeRel */,
+                            47B49A0C7CEA47C4992D747D /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              C8F45D21E9F04D5597E126FB /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            095149825B734EFBA650A945 /* Debug */,
+                            703F9AF77B4349CD80029707 /* Release */,
+                            6C3D827C352B46B3B1BF446A /* MinSizeRel */,
+                            16599C261AEA4BCB8E11ECD8 /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              6CBCD4D2EB4441F9B2682ABA /* Build configuration list for PBXNativeTarget "sample" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            1C83E862C5764BF2B23C389B /* Debug */,
+                            3A1AB040A9E84D04AA4DEC59 /* Release */,
+                            C52740CAA49B4785A25DA5D2 /* MinSizeRel */,
+                            7DBDB033AB8C470584416A8D /* RelWithDebInfo */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+/* End XCConfigurationList section */
+       };
+       rootObject = 4F5CF8741E7B47418BAC689E;
+}

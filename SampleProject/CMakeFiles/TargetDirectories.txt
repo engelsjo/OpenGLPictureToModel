@@ -1,0 +1,3 @@
+/Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeFiles/ALL_BUILD.dir
+/Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeFiles/sample.dir
+/Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeFiles/ZERO_CHECK.dir
