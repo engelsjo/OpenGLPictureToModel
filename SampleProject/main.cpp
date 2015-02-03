@@ -253,8 +253,8 @@ cout << "Hello" << endl;
     glfwSetWindowRefreshCallback(win, win_refresh);
     /* On Mac with Retina display there is a discrepancy between units measured in
      * "screen coordinates" and "pixels" */
-    // glfwSetWindowSizeCallback(win, win_resize);  /* use this for non-retina displays */
-    glfwSetFramebufferSizeCallback(win, win_resize); /* use this for retina displays */
+    glfwSetWindowSizeCallback(win, win_resize);  /* use this for non-retina displays */
+    //glfwSetFramebufferSizeCallback(win, win_resize); /* use this for retina displays */
     glfwSetKeyCallback(win, key_handler);
     glfwSetCursorPosCallback(win, cursor_handler);
     glfwSetScrollCallback(win, scroll_handler);
@@ -277,7 +277,6 @@ cout << "Hello" << endl;
     init_gl();
     make_model();
 
-    int ev_num = 0;
     win_refresh(win);
     while (!glfwWindowShouldClose(win)) {
         glfwWaitEvents();

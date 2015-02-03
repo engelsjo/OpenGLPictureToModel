@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/main.cpp \
+  /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/main.cpp \
   /usr/local/include/GL/glew.h /usr/local/include/glm/glm.hpp \
   /usr/local/include/glm/detail/_fixes.hpp \
   /usr/local/include/glm/fwd.hpp \
@@ -95,7 +95,7 @@ dependencies: \
   /usr/local/include/glm/gtx/rotate_vector.inl \
   /usr/local/include/glm/gtx/vector_angle.inl \
   /usr/local/include/glm/gtx/io.hpp /usr/local/include/glm/gtx/io.inl \
-  /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/Sphere.h \
-  /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/BufferObject.h \
-  /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/HexNut.h \
+  /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/Sphere.h \
+  /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/BufferObject.h \
+  /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/HexNut.h \
   /usr/local/include/GLFW/glfw3.h

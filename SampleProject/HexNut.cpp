@@ -99,8 +99,6 @@ void HexNut::render(bool outline) const {
     glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer);
     glVertexPointer(3, GL_FLOAT, 0, 0);
     glDisableClientState(GL_COLOR_ARRAY);
-//    glBindBuffer(GL_ARRAY_BUFFER, color_buffer);
-//    glColorPointer(3, GL_FLOAT, 0, 0);
 
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, index_buffer);
     /* render the polygon */

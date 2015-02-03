@@ -1,7 +1,7 @@
 dependencies: \
-  /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/HexNut.cpp \
-  /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/HexNut.h \
-  /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/BufferObject.h \
+  /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/HexNut.cpp \
+  /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/HexNut.h \
+  /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/BufferObject.h \
   /usr/local/include/GL/glew.h /usr/local/include/glm/glm.hpp \
   /usr/local/include/glm/detail/_fixes.hpp \
   /usr/local/include/glm/fwd.hpp \

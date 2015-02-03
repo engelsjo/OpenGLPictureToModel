@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/Sphere.cpp \
-  /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/Sphere.h \
+  /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/Sphere.cpp \
+  /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/Sphere.h \
   /usr/local/include/glm/vec3.hpp \
   /usr/local/include/glm/detail/type_vec3.hpp \
   /usr/local/include/glm/detail/type_vec.hpp \
@@ -8,7 +8,7 @@ dependencies: \
   /usr/local/include/glm/detail/type_int.hpp \
   /usr/local/include/glm/detail/setup.hpp \
   /usr/local/include/glm/detail/type_vec3.inl \
-  /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/BufferObject.h \
+  /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/BufferObject.h \
   /usr/local/include/GL/glew.h /usr/local/include/glm/glm.hpp \
   /usr/local/include/glm/detail/_fixes.hpp \
   /usr/local/include/glm/fwd.hpp \
