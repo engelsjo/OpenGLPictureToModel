@@ -7,24 +7,24 @@
        objects = {
 
 /* Begin PBXAggregateTarget section */
-              FB746C528C474223A98569B3 /* ALL_BUILD */ = {
+              0F003B8D864F47B599D87FA5 /* ALL_BUILD */ = {
                      isa = PBXAggregateTarget;
-                     buildConfigurationList = 0A6125E5ACF640FE9824F5E4 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+                     buildConfigurationList = 4B5E055C04D546D2A26E366C /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
                      buildPhases = (
-                            FAC8B1DBEF2348FC94F2B0F6 /* CMake Rules */,
+                            F436306BC2C247F39CB6CD5F /* CMake Rules */,
                      );
                      dependencies = (
-                            8AA00F835D0B428A9444035E /* PBXTargetDependency */,
-                            414AB0C2E4A243A6B58DB07C /* PBXTargetDependency */,
+                            B70F3BD6DD9C4AD38C7F4FC9 /* PBXTargetDependency */,
+                            295078F38D8246FC89B36B50 /* PBXTargetDependency */,
                      );
                      name = ALL_BUILD;
                      productName = ALL_BUILD;
               };
-              220D3C96B7004C6AA3738E43 /* ZERO_CHECK */ = {
+              4A1F0D9ACBA148DD97AF59FB /* ZERO_CHECK */ = {
                      isa = PBXAggregateTarget;
-                     buildConfigurationList = C8F45D21E9F04D5597E126FB /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+                     buildConfigurationList = 4054BF2EC44C4E19B9DEAE4B /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
                      buildPhases = (
-                            9A05D7D9A1B84101B966E28E /* CMake Rules */,
+                            D312E08621F6482F88B8556E /* CMake Rules */,
                      );
                      dependencies = (
                      );
@@ -34,38 +34,41 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-1DB5F8E94FA74FF0974B0AF2 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = B2DEBFE8E0424B3ABCABAFAF /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
-A8193DC8A6014184A80BCAE2 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/HexNut.cpp */ = {isa = PBXBuildFile; fileRef = 3E651D20500E44549A43A00D /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/HexNut.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-7146320EDB1044FC8B769013 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/Sphere.cpp */ = {isa = PBXBuildFile; fileRef = 418AAE7BB9AB45088EF59453 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/Sphere.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-F866C2272BF74412BC0B4D79 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/main.cpp */ = {isa = PBXBuildFile; fileRef = FD1DBD1465474C14827F5365 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/main.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+16B95912F994444FA1D3BA34 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/BufferObject.h */ = {isa = PBXBuildFile; fileRef = 10A7DA13B3A94634B51053C6 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/BufferObject.h */; settings = { COMPILER_FLAGS = ""; }; };
+DD5C971B951B4C73B934CEE0 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 9248E22DC1574855AACD2238 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
+1613FFE544AC4EC4915811F7 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/HexNut.cpp */ = {isa = PBXBuildFile; fileRef = 009C19CA42F4491FACC4B66A /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/HexNut.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+A6675330E0464536A72F1968 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/HexNut.h */ = {isa = PBXBuildFile; fileRef = 0A75415F754B40D6BA29C6ED /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/HexNut.h */; settings = { COMPILER_FLAGS = ""; }; };
+8AFC3C6C8D72453BBFE131F9 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/Sphere.cpp */ = {isa = PBXBuildFile; fileRef = BE74D446C78B4D55ABFFABB2 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/Sphere.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+B5C42E9F59004E88B1F2552A /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/Sphere.h */ = {isa = PBXBuildFile; fileRef = 14F4F465E98846DBA088A4C2 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/Sphere.h */; settings = { COMPILER_FLAGS = ""; }; };
+33D8CB62DBBC44D083C15FBD /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/main.cpp */ = {isa = PBXBuildFile; fileRef = 46A55A290D2A41C28CA60337 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/main.cpp */; settings = { COMPILER_FLAGS = ""; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
-              A91B7B54541F4283898C714C /*  */ = {
+              D08B793BFABF43D38FAF6D90 /*  */ = {
                      isa = PBXBuildStyle;
               };
-              7A9C62E52E7E4DA6B6210B37 /* Debug */ = {
+              80A596EA0C014A32BF3F80FC /* Debug */ = {
                      isa = PBXBuildStyle;
                      buildSettings = {
                             COPY_PHASE_STRIP = NO;
                      };
                      name = Debug;
               };
-              78F4BF385EE340E28532FD09 /* Release */ = {
+              8DF4722E896C493F94870C11 /* Release */ = {
                      isa = PBXBuildStyle;
                      buildSettings = {
                             COPY_PHASE_STRIP = NO;
                      };
                      name = Release;
               };
-              610CA1BD4DF943CF9E15D5CC /* MinSizeRel */ = {
+              9FFD3B4AA75F4586A66FAC14 /* MinSizeRel */ = {
                      isa = PBXBuildStyle;
                      buildSettings = {
                             COPY_PHASE_STRIP = NO;
                      };
                      name = MinSizeRel;
               };
-              E3B7F0FA648E41729BC09D77 /* RelWithDebInfo */ = {
+              F62AC0FB719A4CD9B32989C0 /* RelWithDebInfo */ = {
                      isa = PBXBuildStyle;
                      buildSettings = {
                             COPY_PHASE_STRIP = NO;
@@ -75,121 +78,135 @@ F866C2272BF74412BC0B4D79 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshC
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-              03DFB0C283A3428F975BAF93 /* PBXContainerItemProxy */ = {
+              7F774750957F4B3099B756A6 /* PBXContainerItemProxy */ = {
                      isa = PBXContainerItemProxy;
-                     containerPortal = 4F5CF8741E7B47418BAC689E /* Project object */;
+                     containerPortal = 066967739C574ABCA945A08E /* Project object */;
                      proxyType = 1;
-                     remoteGlobalIDString = 220D3C96B7004C6AA3738E43;
-                     remoteInfo = ZERO_CHECK;
-              };
-              BE0821DFC8C64769B63C157C /* PBXContainerItemProxy */ = {
-                     isa = PBXContainerItemProxy;
-                     containerPortal = 4F5CF8741E7B47418BAC689E /* Project object */;
-                     proxyType = 1;
-                     remoteGlobalIDString = 215199F6784D4FFFB88096D9;
+                     remoteGlobalIDString = 8AD868FAD7A848F38DFF712E;
                      remoteInfo = sample;
               };
-              927A0C47A5654BB1BDBE8BF0 /* PBXContainerItemProxy */ = {
+              BE9A7E6D450248C5B28536E5 /* PBXContainerItemProxy */ = {
                      isa = PBXContainerItemProxy;
-                     containerPortal = 4F5CF8741E7B47418BAC689E /* Project object */;
+                     containerPortal = 066967739C574ABCA945A08E /* Project object */;
                      proxyType = 1;
-                     remoteGlobalIDString = 220D3C96B7004C6AA3738E43;
+                     remoteGlobalIDString = 4A1F0D9ACBA148DD97AF59FB;
+                     remoteInfo = ZERO_CHECK;
+              };
+              DD8245209C224FBF9B375C16 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 066967739C574ABCA945A08E /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 4A1F0D9ACBA148DD97AF59FB;
                      remoteInfo = ZERO_CHECK;
               };
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-09A13EA999DD4840A4B1C24A /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
-6C3A807F7E934A9B89A00B5D /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
-B2DEBFE8E0424B3ABCABAFAF /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
-3E651D20500E44549A43A00D /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/HexNut.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "HexNut.cpp"; path = "HexNut.cpp"; sourceTree = SOURCE_ROOT; };
-418AAE7BB9AB45088EF59453 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/Sphere.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "Sphere.cpp"; path = "Sphere.cpp"; sourceTree = SOURCE_ROOT; };
-FD1DBD1465474C14827F5365 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/main.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "main.cpp"; path = "main.cpp"; sourceTree = SOURCE_ROOT; };
-74140DDD117140948825D9B7 /* sample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = sample; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+80AECD50D73C43AE83F7F391 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+8D3A02F4B4504AF48CC7BFE0 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+10A7DA13B3A94634B51053C6 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/BufferObject.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "BufferObject.h"; path = "BufferObject.h"; sourceTree = SOURCE_ROOT; };
+9248E22DC1574855AACD2238 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = "sourcecode.text"; fileEncoding = 4; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+009C19CA42F4491FACC4B66A /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/HexNut.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "HexNut.cpp"; path = "HexNut.cpp"; sourceTree = SOURCE_ROOT; };
+0A75415F754B40D6BA29C6ED /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/HexNut.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "HexNut.h"; path = "HexNut.h"; sourceTree = SOURCE_ROOT; };
+BE74D446C78B4D55ABFFABB2 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/Sphere.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "Sphere.cpp"; path = "Sphere.cpp"; sourceTree = SOURCE_ROOT; };
+14F4F465E98846DBA088A4C2 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/Sphere.h */ = {isa = PBXFileReference; explicitFileType = "sourcecode.c.h"; fileEncoding = 4; name = "Sphere.h"; path = "Sphere.h"; sourceTree = SOURCE_ROOT; };
+46A55A290D2A41C28CA60337 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/main.cpp */ = {isa = PBXFileReference; explicitFileType = "sourcecode.cpp.cpp"; fileEncoding = 4; name = "main.cpp"; path = "main.cpp"; sourceTree = SOURCE_ROOT; };
+3E022A2D5E534235B05C9F50 /* sample */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = sample; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-              0FDBF35C9347432B9E5F1BEB  = {
+              ACB93D8FE00A4E9BAAAEC9F0  = {
                      isa = PBXGroup;
                      children = (
-                            69C224554B5F4D08A3355E28 /* Sources */,
-                            151B1BDED96641DD963E6100 /* Resources */,
-                            11A3CF5276B14F018FD1C6D1 /* Products */,
+                            E6CA6DF642AA410AB4D2B6BF /* Sources */,
+                            363BFA0EF529437BB55C62E6 /* Resources */,
+                            33549382C423415BBDCAAC67 /* Products */,
                      );
                      sourceTree = "<group>";
               };
-              69C224554B5F4D08A3355E28 /* Sources */ = {
+              E6CA6DF642AA410AB4D2B6BF /* Sources */ = {
                      isa = PBXGroup;
                      children = (
-                            13436F6D98A24251B4FB8D23 /* ALL_BUILD */,
-                            00C8A2FF7BC94FA1888D427F /* sample */,
-                            ACCDA713378E44B383454938 /* ZERO_CHECK */,
+                            5FF6417ED626428CB882039C /* ALL_BUILD */,
+                            6D457440213E4A539C5BAFDD /* sample */,
+                            54AA842BE1CB4B50AA1F9A00 /* ZERO_CHECK */,
                      );
                      name = Sources;
                      sourceTree = "<group>";
               };
-              151B1BDED96641DD963E6100 /* Resources */ = {
+              363BFA0EF529437BB55C62E6 /* Resources */ = {
                      isa = PBXGroup;
                      children = (
                      );
                      name = Resources;
                      sourceTree = "<group>";
               };
-              13436F6D98A24251B4FB8D23 /* ALL_BUILD */ = {
+              5FF6417ED626428CB882039C /* ALL_BUILD */ = {
                      isa = PBXGroup;
                      children = (
-                            535678DAA43F478A824AC935 /* CMake Rules */,
-                            09A13EA999DD4840A4B1C24A /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeLists.txt */,
+                            439BDD2123114F23B8FB9576 /* CMake Rules */,
+                            80AECD50D73C43AE83F7F391 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/CMakeLists.txt */,
                      );
                      name = ALL_BUILD;
                      sourceTree = "<group>";
               };
-              535678DAA43F478A824AC935 /* CMake Rules */ = {
+              439BDD2123114F23B8FB9576 /* CMake Rules */ = {
                      isa = PBXGroup;
                      children = (
                      );
                      name = "CMake Rules";
                      sourceTree = "<group>";
               };
-              00C8A2FF7BC94FA1888D427F /* sample */ = {
+              6D457440213E4A539C5BAFDD /* sample */ = {
                      isa = PBXGroup;
                      children = (
-                            B0D531A222AF408FA43F406B /* Source Files */,
-                            B2DEBFE8E0424B3ABCABAFAF /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeLists.txt */,
+                            68BCC89DE9494C59AB1D161D /* Source Files */,
+                            EC22289A0C7646DBBACD5167 /* Header Files */,
+                            9248E22DC1574855AACD2238 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/CMakeLists.txt */,
                      );
                      name = sample;
                      sourceTree = "<group>";
               };
-              B0D531A222AF408FA43F406B /* Source Files */ = {
+              68BCC89DE9494C59AB1D161D /* Source Files */ = {
                      isa = PBXGroup;
                      children = (
-                            3E651D20500E44549A43A00D /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/HexNut.cpp */,
-                            418AAE7BB9AB45088EF59453 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/Sphere.cpp */,
-                            FD1DBD1465474C14827F5365 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/main.cpp */,
+                            009C19CA42F4491FACC4B66A /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/HexNut.cpp */,
+                            BE74D446C78B4D55ABFFABB2 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/Sphere.cpp */,
+                            46A55A290D2A41C28CA60337 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/main.cpp */,
                      );
                      name = "Source Files";
                      sourceTree = "<group>";
               };
-              ACCDA713378E44B383454938 /* ZERO_CHECK */ = {
+              EC22289A0C7646DBBACD5167 /* Header Files */ = {
                      isa = PBXGroup;
                      children = (
-                            1CBA3E42AFBA47D581AE95C2 /* CMake Rules */,
-                            6C3A807F7E934A9B89A00B5D /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeLists.txt */,
+                            10A7DA13B3A94634B51053C6 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/BufferObject.h */,
+                            0A75415F754B40D6BA29C6ED /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/HexNut.h */,
+                            14F4F465E98846DBA088A4C2 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/Sphere.h */,
+                     );
+                     name = "Header Files";
+                     sourceTree = "<group>";
+              };
+              54AA842BE1CB4B50AA1F9A00 /* ZERO_CHECK */ = {
+                     isa = PBXGroup;
+                     children = (
+                            0522E5FBA1744C548BF5DC1B /* CMake Rules */,
+                            8D3A02F4B4504AF48CC7BFE0 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/CMakeLists.txt */,
                      );
                      name = ZERO_CHECK;
                      sourceTree = "<group>";
               };
-              1CBA3E42AFBA47D581AE95C2 /* CMake Rules */ = {
+              0522E5FBA1744C548BF5DC1B /* CMake Rules */ = {
                      isa = PBXGroup;
                      children = (
                      );
                      name = "CMake Rules";
                      sourceTree = "<group>";
               };
-              11A3CF5276B14F018FD1C6D1 /* Products */ = {
+              33549382C423415BBDCAAC67 /* Products */ = {
                      isa = PBXGroup;
                      children = (
-                            74140DDD117140948825D9B7 /* sample */,
+                            3E022A2D5E534235B05C9F50 /* sample */,
                      );
                      name = Products;
                      sourceTree = "<group>";
@@ -197,54 +214,54 @@ FD1DBD1465474C14827F5365 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshC
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-              215199F6784D4FFFB88096D9 /* sample */ = {
+              8AD868FAD7A848F38DFF712E /* sample */ = {
                      isa = PBXNativeTarget;
-                     buildConfigurationList = 6CBCD4D2EB4441F9B2682ABA /* Build configuration list for PBXNativeTarget "sample" */;
+                     buildConfigurationList = 0C653ECA20FC4FDA8BA09309 /* Build configuration list for PBXNativeTarget "sample" */;
                      buildPhases = (
-                            33E5FF966F08499EB6A3FF75 /* Sources */,
+                            0FDC0B17BC404313A57D75C6 /* Sources */,
                      );
                      buildRules = (
                      );
                      dependencies = (
-                            BA18D70118334724AB6C9AC5 /* PBXTargetDependency */,
+                            1C70B1E757E843CA9B400468 /* PBXTargetDependency */,
                      );
                      name = sample;
                      productName = sample;
-                     productReference = 74140DDD117140948825D9B7 /* sample */;
+                     productReference = 3E022A2D5E534235B05C9F50 /* sample */;
                      productType = "com.apple.product-type.tool";
               };
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-              4F5CF8741E7B47418BAC689E /* Project object */ = {
+              066967739C574ABCA945A08E /* Project object */ = {
                      isa = PBXProject;
                      attributes = {
                             BuildIndependentTargetsInParallel = YES;
                      };
-                     buildConfigurationList = 7A09FB5D70CC4EBE8C3D5D52 /* Build configuration list for PBXProject  "sample" */;
+                     buildConfigurationList = C0628E77B39C407A8F6110BD /* Build configuration list for PBXProject  "sample" */;
                      buildSettings = {
                      };
                      buildStyles = (
-                            7A9C62E52E7E4DA6B6210B37 /* Debug */,
-                            78F4BF385EE340E28532FD09 /* Release */,
-                            610CA1BD4DF943CF9E15D5CC /* MinSizeRel */,
-                            E3B7F0FA648E41729BC09D77 /* RelWithDebInfo */,
+                            80A596EA0C014A32BF3F80FC /* Debug */,
+                            8DF4722E896C493F94870C11 /* Release */,
+                            9FFD3B4AA75F4586A66FAC14 /* MinSizeRel */,
+                            F62AC0FB719A4CD9B32989C0 /* RelWithDebInfo */,
                      );
                      compatibilityVersion = "Xcode 3.2";
                      hasScannedForEncodings = 0;
-                     mainGroup = 0FDBF35C9347432B9E5F1BEB;
+                     mainGroup = ACB93D8FE00A4E9BAAAEC9F0;
                      projectDirPath = ".";
                      projectRoot = "";
                      targets = (
-                            FB746C528C474223A98569B3 /* ALL_BUILD */,
-                            220D3C96B7004C6AA3738E43 /* ZERO_CHECK */,
-                            215199F6784D4FFFB88096D9 /* sample */,
+                            0F003B8D864F47B599D87FA5 /* ALL_BUILD */,
+                            4A1F0D9ACBA148DD97AF59FB /* ZERO_CHECK */,
+                            8AD868FAD7A848F38DFF712E /* sample */,
                      );
               };
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-              CC03FCE2E5E14E67B7192D85 /*  */ = {
+              BDAF2BD4D614404BB1F93F11 /*  */ = {
                      isa = PBXShellScriptBuildPhase;
                      buildActionMask = 2147483647;
                      files = (
@@ -259,7 +276,7 @@ FD1DBD1465474C14827F5365 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshC
 exit 0";
                      showEnvVarsInLog = 0;
               };
-              FAC8B1DBEF2348FC94F2B0F6 /* CMake Rules */ = {
+              F436306BC2C247F39CB6CD5F /* CMake Rules */ = {
                      isa = PBXShellScriptBuildPhase;
                      buildActionMask = 2147483647;
                      files = (
@@ -267,10 +284,10 @@ exit 0";
                      name = "CMake Rules";
                      runOnlyForDeploymentPostprocessing = 0;
                      shellPath = /bin/sh;
-                     shellScript = "make -C /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake -f /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     shellScript = "make -C /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject -f /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
                      showEnvVarsInLog = 0;
               };
-              442F46AB49BD411F96B75152 /*  */ = {
+              A4D3B48686ED4379A629867C /*  */ = {
                      isa = PBXShellScriptBuildPhase;
                      buildActionMask = 2147483647;
                      files = (
@@ -285,7 +302,7 @@ exit 0";
 exit 0";
                      showEnvVarsInLog = 0;
               };
-              9A05D7D9A1B84101B966E28E /* CMake Rules */ = {
+              D312E08621F6482F88B8556E /* CMake Rules */ = {
                      isa = PBXShellScriptBuildPhase;
                      buildActionMask = 2147483647;
                      files = (
@@ -293,84 +310,84 @@ exit 0";
                      name = "CMake Rules";
                      runOnlyForDeploymentPostprocessing = 0;
                      shellPath = /bin/sh;
-                     shellScript = "make -C /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake -f /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     shellScript = "make -C /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject -f /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
                      showEnvVarsInLog = 0;
               };
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-              33E5FF966F08499EB6A3FF75 /* Sources */ = {
+              0FDC0B17BC404313A57D75C6 /* Sources */ = {
                      isa = PBXSourcesBuildPhase;
                      buildActionMask = 2147483647;
                      files = (
-                            A8193DC8A6014184A80BCAE2 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/HexNut.cpp */,
-                            7146320EDB1044FC8B769013 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/Sphere.cpp */,
-                            F866C2272BF74412BC0B4D79 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/main.cpp */,
+                            1613FFE544AC4EC4915811F7 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/HexNut.cpp */,
+                            8AFC3C6C8D72453BBFE131F9 /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/Sphere.cpp */,
+                            33D8CB62DBBC44D083C15FBD /* /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/main.cpp */,
                      );
                      runOnlyForDeploymentPostprocessing = 0;
               };
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-              8AA00F835D0B428A9444035E /* PBXTargetDependency */ = {
+              B70F3BD6DD9C4AD38C7F4FC9 /* PBXTargetDependency */ = {
                      isa = PBXTargetDependency;
-                     target = 220D3C96B7004C6AA3738E43 /* ZERO_CHECK */;
-                     targetProxy = 03DFB0C283A3428F975BAF93 /* PBXContainerItemProxy */;
+                     target = 8AD868FAD7A848F38DFF712E /* sample */;
+                     targetProxy = 7F774750957F4B3099B756A6 /* PBXContainerItemProxy */;
               };
-              414AB0C2E4A243A6B58DB07C /* PBXTargetDependency */ = {
+              295078F38D8246FC89B36B50 /* PBXTargetDependency */ = {
                      isa = PBXTargetDependency;
-                     target = 215199F6784D4FFFB88096D9 /* sample */;
-                     targetProxy = BE0821DFC8C64769B63C157C /* PBXContainerItemProxy */;
+                     target = 4A1F0D9ACBA148DD97AF59FB /* ZERO_CHECK */;
+                     targetProxy = BE9A7E6D450248C5B28536E5 /* PBXContainerItemProxy */;
               };
-              BA18D70118334724AB6C9AC5 /* PBXTargetDependency */ = {
+              1C70B1E757E843CA9B400468 /* PBXTargetDependency */ = {
                      isa = PBXTargetDependency;
-                     target = 220D3C96B7004C6AA3738E43 /* ZERO_CHECK */;
-                     targetProxy = 927A0C47A5654BB1BDBE8BF0 /* PBXContainerItemProxy */;
+                     target = 4A1F0D9ACBA148DD97AF59FB /* ZERO_CHECK */;
+                     targetProxy = DD8245209C224FBF9B375C16 /* PBXContainerItemProxy */;
               };
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-              CCF3AB9885094C449A8C80C6 /* Debug */ = {
+              39EDF3A03CEC4096A39E4EA0 /* Debug */ = {
                      isa = XCBuildConfiguration;
                      buildSettings = {
                             ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
                             ONLY_ACTIVE_ARCH = YES;
                             SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk";
-                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/build;
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/build;
                      };
                      name = Debug;
               };
-              0104EF0976B54F4AA10F80FC /* Release */ = {
+              2371B219109A4C139DA7ADE3 /* Release */ = {
                      isa = XCBuildConfiguration;
                      buildSettings = {
                             ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
                             ONLY_ACTIVE_ARCH = YES;
                             SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk";
-                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/build;
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/build;
                      };
                      name = Release;
               };
-              3225F82AA41D4D09A5305382 /* MinSizeRel */ = {
+              FD1FC118EA6B4C41BBB5BA0D /* MinSizeRel */ = {
                      isa = XCBuildConfiguration;
                      buildSettings = {
                             ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
                             ONLY_ACTIVE_ARCH = YES;
                             SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk";
-                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/build;
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/build;
                      };
                      name = MinSizeRel;
               };
-              646CE2926CD84911884ACCD8 /* RelWithDebInfo */ = {
+              1D27D71C19C243BCBA18B9AB /* RelWithDebInfo */ = {
                      isa = XCBuildConfiguration;
                      buildSettings = {
                             ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
                             ONLY_ACTIVE_ARCH = YES;
                             SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk";
-                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/build;
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/build;
                      };
                      name = RelWithDebInfo;
               };
-              B8AB7B160E1645C6B0ACBB78 /* Debug */ = {
+              07C722883F584F9FB18B964E /* Debug */ = {
                      isa = XCBuildConfiguration;
                      buildSettings = {
                             COMBINE_HIDPI_IMAGES = YES;
@@ -386,101 +403,13 @@ exit 0";
                             OTHER_REZFLAGS = "";
                             PRODUCT_NAME = ALL_BUILD;
                             SECTORDER_FLAGS = "";
-                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
-                            USE_HEADERMAP = NO;
-                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
-                     };
-                     name = Debug;
-              };
-              DDF8256994FB4396B126AC45 /* Release */ = {
-                     isa = XCBuildConfiguration;
-                     buildSettings = {
-                            COMBINE_HIDPI_IMAGES = YES;
-                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-                            GCC_OPTIMIZATION_LEVEL = 0;
-                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
-                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-                            HEADER_SEARCH_PATHS = (/usr/local/include, );
-                            INSTALL_PATH = "";
-                            OTHER_CFLAGS = "  ";
-                            OTHER_LDFLAGS = " ";
-                            OTHER_REZFLAGS = "";
-                            PRODUCT_NAME = ALL_BUILD;
-                            SECTORDER_FLAGS = "";
-                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
-                            USE_HEADERMAP = NO;
-                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
-                     };
-                     name = Release;
-              };
-              C75B300775844FE1A8065EB2 /* MinSizeRel */ = {
-                     isa = XCBuildConfiguration;
-                     buildSettings = {
-                            COMBINE_HIDPI_IMAGES = YES;
-                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-                            GCC_OPTIMIZATION_LEVEL = 0;
-                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
-                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-                            HEADER_SEARCH_PATHS = (/usr/local/include, );
-                            INSTALL_PATH = "";
-                            OTHER_CFLAGS = "  ";
-                            OTHER_LDFLAGS = " ";
-                            OTHER_REZFLAGS = "";
-                            PRODUCT_NAME = ALL_BUILD;
-                            SECTORDER_FLAGS = "";
-                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
-                            USE_HEADERMAP = NO;
-                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
-                     };
-                     name = MinSizeRel;
-              };
-              47B49A0C7CEA47C4992D747D /* RelWithDebInfo */ = {
-                     isa = XCBuildConfiguration;
-                     buildSettings = {
-                            COMBINE_HIDPI_IMAGES = YES;
-                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-                            GCC_OPTIMIZATION_LEVEL = 0;
-                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
-                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-                            HEADER_SEARCH_PATHS = (/usr/local/include, );
-                            INSTALL_PATH = "";
-                            OTHER_CFLAGS = "  ";
-                            OTHER_LDFLAGS = " ";
-                            OTHER_REZFLAGS = "";
-                            PRODUCT_NAME = ALL_BUILD;
-                            SECTORDER_FLAGS = "";
-                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
-                            USE_HEADERMAP = NO;
-                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
-                     };
-                     name = RelWithDebInfo;
-              };
-              095149825B734EFBA650A945 /* Debug */ = {
-                     isa = XCBuildConfiguration;
-                     buildSettings = {
-                            COMBINE_HIDPI_IMAGES = YES;
-                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-                            GCC_OPTIMIZATION_LEVEL = 0;
-                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
-                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-                            HEADER_SEARCH_PATHS = (/usr/local/include, );
-                            INSTALL_PATH = "";
-                            OTHER_CFLAGS = "  ";
-                            OTHER_LDFLAGS = " ";
-                            OTHER_REZFLAGS = "";
-                            PRODUCT_NAME = ZERO_CHECK;
-                            SECTORDER_FLAGS = "";
-                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject;
                             USE_HEADERMAP = NO;
                             WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
                      };
                      name = Debug;
               };
-              703F9AF77B4349CD80029707 /* Release */ = {
+              F9058477B107414E9559B5E8 /* Release */ = {
                      isa = XCBuildConfiguration;
                      buildSettings = {
                             COMBINE_HIDPI_IMAGES = YES;
@@ -494,15 +423,15 @@ exit 0";
                             OTHER_CFLAGS = "  ";
                             OTHER_LDFLAGS = " ";
                             OTHER_REZFLAGS = "";
-                            PRODUCT_NAME = ZERO_CHECK;
+                            PRODUCT_NAME = ALL_BUILD;
                             SECTORDER_FLAGS = "";
-                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject;
                             USE_HEADERMAP = NO;
                             WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
                      };
                      name = Release;
               };
-              6C3D827C352B46B3B1BF446A /* MinSizeRel */ = {
+              AF15FF46BBB4460E855C5912 /* MinSizeRel */ = {
                      isa = XCBuildConfiguration;
                      buildSettings = {
                             COMBINE_HIDPI_IMAGES = YES;
@@ -516,15 +445,37 @@ exit 0";
                             OTHER_CFLAGS = "  ";
                             OTHER_LDFLAGS = " ";
                             OTHER_REZFLAGS = "";
-                            PRODUCT_NAME = ZERO_CHECK;
+                            PRODUCT_NAME = ALL_BUILD;
                             SECTORDER_FLAGS = "";
-                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject;
                             USE_HEADERMAP = NO;
                             WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
                      };
                      name = MinSizeRel;
               };
-              16599C261AEA4BCB8E11ECD8 /* RelWithDebInfo */ = {
+              DFA85D200EB94BB0BF28F605 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = RelWithDebInfo;
+              };
+              49D9CA5B1A564A12A8F744FF /* Debug */ = {
                      isa = XCBuildConfiguration;
                      buildSettings = {
                             COMBINE_HIDPI_IMAGES = YES;
@@ -540,13 +491,79 @@ exit 0";
                             OTHER_REZFLAGS = "";
                             PRODUCT_NAME = ZERO_CHECK;
                             SECTORDER_FLAGS = "";
-                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              F5F6FEF7AD1E40BF89384A90 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              DFCCBE07763B4B73B40177C4 /* MinSizeRel */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = MinSizeRel;
+              };
+              D873E2CB75454DAE9C657C93 /* RelWithDebInfo */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            COMBINE_HIDPI_IMAGES = YES;
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/usr/local/include, );
+                            INSTALL_PATH = "";
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = " ";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject;
                             USE_HEADERMAP = NO;
                             WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
                      };
                      name = RelWithDebInfo;
               };
-              1C83E862C5764BF2B23C389B /* Debug */ = {
+              0F7DF0EBA75149CCB4C14E4F /* Debug */ = {
                      isa = XCBuildConfiguration;
                      buildSettings = {
                             COMBINE_HIDPI_IMAGES = YES;
@@ -566,13 +583,13 @@ exit 0";
                             OTHER_REZFLAGS = "";
                             PRODUCT_NAME = sample;
                             SECTORDER_FLAGS = "";
-                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject;
                             USE_HEADERMAP = NO;
                             WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
                      };
                      name = Debug;
               };
-              3A1AB040A9E84D04AA4DEC59 /* Release */ = {
+              C2B7753516F0407B814B4750 /* Release */ = {
                      isa = XCBuildConfiguration;
                      buildSettings = {
                             COMBINE_HIDPI_IMAGES = YES;
@@ -592,13 +609,13 @@ exit 0";
                             OTHER_REZFLAGS = "";
                             PRODUCT_NAME = sample;
                             SECTORDER_FLAGS = "";
-                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject;
                             USE_HEADERMAP = NO;
                             WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
                      };
                      name = Release;
               };
-              C52740CAA49B4785A25DA5D2 /* MinSizeRel */ = {
+              F21A876657E14B0ABE4F8136 /* MinSizeRel */ = {
                      isa = XCBuildConfiguration;
                      buildSettings = {
                             COMBINE_HIDPI_IMAGES = YES;
@@ -618,13 +635,13 @@ exit 0";
                             OTHER_REZFLAGS = "";
                             PRODUCT_NAME = sample;
                             SECTORDER_FLAGS = "";
-                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject;
                             USE_HEADERMAP = NO;
                             WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
                      };
                      name = MinSizeRel;
               };
-              7DBDB033AB8C470584416A8D /* RelWithDebInfo */ = {
+              DAAA5DAC4E4B4497B3654A1F /* RelWithDebInfo */ = {
                      isa = XCBuildConfiguration;
                      buildSettings = {
                             COMBINE_HIDPI_IMAGES = YES;
@@ -644,7 +661,7 @@ exit 0";
                             OTHER_REZFLAGS = "";
                             PRODUCT_NAME = sample;
                             SECTORDER_FLAGS = "";
-                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake;
+                            SYMROOT = /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject;
                             USE_HEADERMAP = NO;
                             WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
                      };
@@ -653,51 +670,51 @@ exit 0";
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-              7A09FB5D70CC4EBE8C3D5D52 /* Build configuration list for PBXProject  "sample" */ = {
+              C0628E77B39C407A8F6110BD /* Build configuration list for PBXProject  "sample" */ = {
                      isa = XCConfigurationList;
                      buildConfigurations = (
-                            CCF3AB9885094C449A8C80C6 /* Debug */,
-                            0104EF0976B54F4AA10F80FC /* Release */,
-                            3225F82AA41D4D09A5305382 /* MinSizeRel */,
-                            646CE2926CD84911884ACCD8 /* RelWithDebInfo */,
+                            39EDF3A03CEC4096A39E4EA0 /* Debug */,
+                            2371B219109A4C139DA7ADE3 /* Release */,
+                            FD1FC118EA6B4C41BBB5BA0D /* MinSizeRel */,
+                            1D27D71C19C243BCBA18B9AB /* RelWithDebInfo */,
                      );
                      defaultConfigurationIsVisible = 0;
                      defaultConfigurationName = Debug;
               };
-              0A6125E5ACF640FE9824F5E4 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+              4B5E055C04D546D2A26E366C /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
                      isa = XCConfigurationList;
                      buildConfigurations = (
-                            B8AB7B160E1645C6B0ACBB78 /* Debug */,
-                            DDF8256994FB4396B126AC45 /* Release */,
-                            C75B300775844FE1A8065EB2 /* MinSizeRel */,
-                            47B49A0C7CEA47C4992D747D /* RelWithDebInfo */,
+                            07C722883F584F9FB18B964E /* Debug */,
+                            F9058477B107414E9559B5E8 /* Release */,
+                            AF15FF46BBB4460E855C5912 /* MinSizeRel */,
+                            DFA85D200EB94BB0BF28F605 /* RelWithDebInfo */,
                      );
                      defaultConfigurationIsVisible = 0;
                      defaultConfigurationName = Debug;
               };
-              C8F45D21E9F04D5597E126FB /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+              4054BF2EC44C4E19B9DEAE4B /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
                      isa = XCConfigurationList;
                      buildConfigurations = (
-                            095149825B734EFBA650A945 /* Debug */,
-                            703F9AF77B4349CD80029707 /* Release */,
-                            6C3D827C352B46B3B1BF446A /* MinSizeRel */,
-                            16599C261AEA4BCB8E11ECD8 /* RelWithDebInfo */,
+                            49D9CA5B1A564A12A8F744FF /* Debug */,
+                            F5F6FEF7AD1E40BF89384A90 /* Release */,
+                            DFCCBE07763B4B73B40177C4 /* MinSizeRel */,
+                            D873E2CB75454DAE9C657C93 /* RelWithDebInfo */,
                      );
                      defaultConfigurationIsVisible = 0;
                      defaultConfigurationName = Debug;
               };
-              6CBCD4D2EB4441F9B2682ABA /* Build configuration list for PBXNativeTarget "sample" */ = {
+              0C653ECA20FC4FDA8BA09309 /* Build configuration list for PBXNativeTarget "sample" */ = {
                      isa = XCConfigurationList;
                      buildConfigurations = (
-                            1C83E862C5764BF2B23C389B /* Debug */,
-                            3A1AB040A9E84D04AA4DEC59 /* Release */,
-                            C52740CAA49B4785A25DA5D2 /* MinSizeRel */,
-                            7DBDB033AB8C470584416A8D /* RelWithDebInfo */,
+                            0F7DF0EBA75149CCB4C14E4F /* Debug */,
+                            C2B7753516F0407B814B4750 /* Release */,
+                            F21A876657E14B0ABE4F8136 /* MinSizeRel */,
+                            DAAA5DAC4E4B4497B3654A1F /* RelWithDebInfo */,
                      );
                      defaultConfigurationIsVisible = 0;
                      defaultConfigurationName = Debug;
               };
 /* End XCConfigurationList section */
        };
-       rootObject = 4F5CF8741E7B47418BAC689E;
+       rootObject = 066967739C574ABCA945A08E;
 }

@@ -2,9 +2,9 @@
 # Custom rules for ZERO_CHECK
 .SUFFIXES: 
 all: \
-	/Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeFiles/ZERO_CHECK
+	/Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/CMakeFiles/ZERO_CHECK
 
 
-/Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeFiles/ZERO_CHECK: 
+/Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/CMakeFiles/ZERO_CHECK: 
 	echo ""
-	make -f /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/CMakeScripts/ReRunCMake.make
+	make -f /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/CMakeScripts/ReRunCMake.make

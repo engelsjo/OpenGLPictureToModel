@@ -1,4 +1,4 @@
-# Install script for directory: /Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake
+# Install script for directory: /Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,7 +33,7 @@ else()
   set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 endif()
 
-file(WRITE "/Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/${CMAKE_INSTALL_MANIFEST}" "")
+file(WRITE "/Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/${CMAKE_INSTALL_MANIFEST}" "")
 foreach(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  file(APPEND "/Users/joshuaengelsma/git/OpenGLPictureToModel/JoshCMake/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  file(APPEND "/Users/joshuaengelsma/git/OpenGLPictureToModel/SampleProject/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 endforeach()

@@ -24,7 +24,7 @@ if (APPLE)
   include_directories(/usr/local/include)
 endif (APPLE)
 
-set(SOURCE_FILES main.cpp Sphere.cpp HexNut.cpp)
+set(SOURCE_FILES main.cpp Sphere.cpp HexNut.cpp HexNut.h Sphere.h BufferObject.h)
 add_executable(sample ${SOURCE_FILES})
   target_link_libraries (sample ${GLFW3_LIBRARY} ${OPENGL_LIBRARIES} ${COCOA_LIBRARY}
      ${COREVID_LIBRARY} ${IOKIT_LIBRARY} ${GLEW_LIBRARY})

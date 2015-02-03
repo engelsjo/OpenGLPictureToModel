@@ -16,7 +16,7 @@
 		<string>github.com:engelsjo/iOS-Container-View-Demo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>JoshCMake/sample.xcodeproj</string>
+	<string>SampleProject/sample.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>52EACED4D41244CF9D0F3B452156E545D494C0E7</key>
