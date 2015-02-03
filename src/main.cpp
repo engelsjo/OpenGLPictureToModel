@@ -78,7 +78,8 @@ void win_refresh (GLFWwindow *win) {
     glVertex3f (0, 0, S * 1.1);
     glEnd();
     
-    
+    /* must swap buffer at the end of render function */
+    glfwSwapBuffers(win);    
 }
 
 /* action: GLFW_PRESS, GLFW_RELEASE, or GLFW_REPEAT */
