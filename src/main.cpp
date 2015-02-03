@@ -16,18 +16,18 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <glm/gtx/vector_angle.hpp>
 #include <glm/gtx/io.hpp>
-#include "LandBase.h"
 #undef GLFW_DLL
 #include <GLFW/glfw3.h>
+#include "Cube.h"
 
 void init_model();
 void win_refresh(GLFWwindow*);
 float arc_ball_rad_square;
 int screen_ctr_x, screen_ctr_y;
-LandBase one;
+Cube one;
 
 glm::mat4 camera_cf;
-
+using namespace std;
 void err_function (int what, const char *msg) {
     cerr << what << " " << msg << endl;
 }
@@ -78,8 +78,13 @@ void win_refresh (GLFWwindow *win) {
     glVertex3f (0, 0, S * 1.1);
     glEnd();
     
+    glColor3ub (255, 0, 0);
+    glPushMatrix();
+    one.render(true);  /* true: super impose the polygon outline */
+    glPopMatrix();
+    
     /* must swap buffer at the end of render function */
-    glfwSwapBuffers(win);    
+    glfwSwapBuffers(win);
 }
 
 /* action: GLFW_PRESS, GLFW_RELEASE, or GLFW_REPEAT */
@@ -103,7 +108,7 @@ void key_handler (GLFWwindow *win, int key, int scan_code, int action, int mods)
             case GLFW_KEY_6:
                 /* rebuild the model at different level of detail */
                 int N = key - GLFW_KEY_0;
-                one.build((void *)&N);
+                //one.build((void *)&N);
                 break;
         }
     }
@@ -181,7 +186,7 @@ void init_gl() {
 
 void make_model() {
     int N = 0;
-    //one.build ((void *)&N);
+    one.build ((void *)&N);
 }
 
 int main(){
