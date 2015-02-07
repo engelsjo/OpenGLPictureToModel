@@ -17,42 +17,34 @@ void Cone::build(void* data) {
     
     vec3 topPt = vec3{0, 0, HEIGHT};
     vec3 centerPt = vec3{0, 0, 0};
-    all_points.push_back(topPt);
-    all_points.push_back(centerPt);
     
-    float anglePart = 360.0 / SUB_DIVIDE;
-    float angleCounter = 0;
+    float delta  = 2 * M_PI / SUB_DIVIDE;
+    float angle = 0;
     
     /**************    all vertices of the cone    **************/
     for(int i = 0; i < SUB_DIVIDE; i ++){ //vertices
-        float x = RADIUS * cos(angleCounter);
-        float y = RADIUS * sin(angleCounter);
+        float x = RADIUS * cos(angle);
+        float y = RADIUS * sin(angle);
         vec3 v0 = vec3{x, y, 0};
         all_points.push_back(v0);
-        angleCounter += anglePart;
+        angle += delta;
     }
+    all_points.push_back(topPt);
+    all_points.push_back(centerPt);
     
     /**************    'side' wrapping of cone'    **************/
-    for(int i = 2; i < SUB_DIVIDE + 1; i++){ //indices
+    all_index.push_back(SUB_DIVIDE); //top point is center of triangle fan
+    for(int i = 0; i < SUB_DIVIDE; i++){
         all_index.push_back(i);
-        all_index.push_back(i + 1);
-        all_index.push_back(0);
     }
-    
-    all_index.push_back(1); //make sure that cone wraps around
-    all_index.push_back(2);
-    all_index.push_back(0);
+    all_index.push_back(0); //wrap around
     
     /**************    'bottom face of cone'    **************/
-    for(int i = 2; i < SUB_DIVIDE + 1; i++){ //indices
+    all_index.push_back(SUB_DIVIDE + 1); //bottom center is center of tri fan
+    for(int i = SUB_DIVIDE - 1; i >= 0; i--){
         all_index.push_back(i);
-        all_index.push_back(i + 1);
-        all_index.push_back(1);
     }
-    
-    all_index.push_back(2); //make sure that base wraps around
-    all_index.push_back(3);
-    all_index.push_back(1);
+    all_index.push_back(SUB_DIVIDE - 1); //wrap around
     
     glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer);
     glBufferData(GL_ARRAY_BUFFER, all_points.size() * sizeof(float) * 3, NULL, GL_DYNAMIC_DRAW);
@@ -86,7 +78,9 @@ void Cone::render(bool outline) const {
     /* render the polygon */
     glPolygonMode(GL_FRONT, GL_FILL);
     glColor3ub (255, 0, 0);
-    glDrawRangeElements(GL_TRIANGLES, 0, 0, all_index.size(), GL_UNSIGNED_SHORT, 0);
+    int N = SUB_DIVIDE + 2;
+    glDrawElements(GL_TRIANGLE_FAN, N, GL_UNSIGNED_SHORT, 0);
+    glDrawElements(GL_TRIANGLE_FAN, SUB_DIVIDE + 2, GL_UNSIGNED_SHORT, (void*) (sizeof(GLushort) * N));
     
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
