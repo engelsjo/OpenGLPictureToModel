@@ -9,10 +9,16 @@
 #include "TCone.h"
 
 using glm::vec3;
-void TCone::build_with_params(float top_rad, float bot_rad, float height, float subdivisions){
-    TOP_RAD = top_rad;
-    BOT_RAD = bot_rad;
+void TCone::build_with_params(float height, float x_rad_t, float
+                              y_rad_t, float x_rad_b, float y_rad_b, float subdivisions){
     CONE_HEIGHT = height;
+    
+    x_rad_top = x_rad_t;
+    y_rad_top = y_rad_t;
+    
+    x_rad_bot = x_rad_b;
+    y_rad_bot = y_rad_b;
+    
     N_POINTS = subdivisions;
     build((void*)0);
 }
@@ -25,16 +31,16 @@ void TCone::build(void* data) {
     float delta  = 2 * M_PI / N_POINTS;
     float angle = 0;
     for(int k = 0; k < N_POINTS; k++){ //top circle points
-        float x = TOP_RAD * cos(angle);
-        float y = TOP_RAD * sin(angle);
+        float x = x_rad_top * cos(angle);
+        float y = y_rad_top * sin(angle);
         vec3 vertex = vec3{x, y, CONE_HEIGHT};
         all_points.push_back(vertex);
         angle += delta;
     }
     
     for(int k = 0; k < N_POINTS; k++){ //bottom circle points
-        float x = BOT_RAD * cos(angle);
-        float y = BOT_RAD * sin(angle);
+        float x = x_rad_bot * cos(angle);
+        float y = y_rad_bot * sin(angle);
         vec3 vertex = vec3{x, y, -CONE_HEIGHT};
         all_points.push_back(vertex);
         angle += delta;
