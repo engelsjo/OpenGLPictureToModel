@@ -13,14 +13,15 @@
 #include "BufferObject.h"
 class TCone : public BufferObject {
 private:
-    const float TOP_RAD = 1.0;
-    const float BOT_RAD = .8;
-    const float CONE_HEIGHT = .5; /* half thick */
+    float TOP_RAD = 1.0;
+    float BOT_RAD = .8;
+    float CONE_HEIGHT = .5; /* half thick */
     float N_POINTS = 30;
     
 protected:
 public:
     void build (void*);
+    void build_with_params(float top_rad, float bot_rad, float height, float subdivisions);
     void render(bool) const;
 };
 

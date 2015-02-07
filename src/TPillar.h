@@ -13,13 +13,14 @@
 #include "BufferObject.h"
 class TPillar : public BufferObject {
 private:
-    const float LENGTH = 1;
-    const float WIDTH = .5;
-    const float HEIGHT = 1;
+    float LENGTH = 1;
+    float WIDTH = .5;
+    float HEIGHT = 1;
     
 protected:
 public:
     void build (void*);
+    void build_with_params(float length, float width, float height);
     void render(bool) const;
 };
 

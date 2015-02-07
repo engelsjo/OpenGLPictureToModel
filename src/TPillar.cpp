@@ -12,6 +12,14 @@
 /* NOTE: Pillar is centered on bottom rectangular corner */
 
 using glm::vec3;
+
+void TPillar::build_with_params(float length, float width, float height){
+    LENGTH = length;
+    WIDTH = width;
+    HEIGHT = height;
+    build((void*)0);
+}
+
 void TPillar::build(void* data) {
     
     glGenBuffers(1, &vertex_buffer);

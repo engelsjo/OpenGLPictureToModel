@@ -9,6 +9,14 @@
 #include "TCone.h"
 
 using glm::vec3;
+void TCone::build_with_params(float top_rad, float bot_rad, float height, float subdivisions){
+    TOP_RAD = top_rad;
+    BOT_RAD = bot_rad;
+    CONE_HEIGHT = height;
+    N_POINTS = subdivisions;
+    build((void*)0);
+}
+
 void TCone::build(void* data) {
     
     glGenBuffers(1, &vertex_buffer);

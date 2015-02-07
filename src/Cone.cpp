@@ -10,6 +10,13 @@
 #include <cmath>
 
 using glm::vec3;
+void Cone::build_with_params(float radius, float height, float subdivisions){
+    RADIUS = radius;
+    HEIGHT = height;
+    SUB_DIVIDE = subdivisions;
+    build((void*)0);
+}
+
 void Cone::build(void* data) {
     
     glGenBuffers(1, &vertex_buffer);

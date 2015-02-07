@@ -13,13 +13,14 @@
 #include "BufferObject.h"
 class Cone : public BufferObject {
 private:
-    const float RADIUS = 1.0;
-    const float HEIGHT = 1.0; /* half thick */
-    const float SUB_DIVIDE = 200;
+    float RADIUS = 1.0;
+    float HEIGHT = 1.0; /* half thick */
+    float SUB_DIVIDE = 200;
     
 protected:
 public:
     void build (void*);
+    void build_with_params(float radius, float height, float subdivisions);
     void render(bool) const;
 };
 

@@ -8,8 +8,16 @@
 
 #include "Cube.h"
 #include <cmath>
+/**** NOTE: Cube is centered in the middle of the cube ***** */
 
 using glm::vec3;
+void Cube::build_with_params(float length, float width, float height){
+    LENGTH = length;
+    WIDTH = width;
+    HEIGHT = height;
+    build((void*)0);
+}
+
 void Cube::build(void* data) {
     
     glGenBuffers(1, &vertex_buffer);

@@ -13,14 +13,15 @@
 #include "BufferObject.h"
 class Cube : public BufferObject {
 private:
-    const float LENGTH = 1.0;
-    const float WIDTH = 1.0;
-    const float HEIGHT = 1.0; /* half thick */
+    float LENGTH = 1.0;
+    float WIDTH = 1.0;
+    float HEIGHT = 1.0; /* half thick */
     int top_count;
     
 protected:
 public:
     void build (void*);
+    void build_with_params(float length, float width, float height);
     void render(bool) const;
 };
 #endif /* defined(__ProjectOne__Cube__) */
