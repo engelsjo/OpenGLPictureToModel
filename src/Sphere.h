@@ -15,6 +15,9 @@ public:
     float radius() const {
         return sphere_radius;
     }
+    void setRadius(float rad){
+        sphere_radius = rad;
+    }
     void build(void *);
 };
 
