@@ -25,6 +25,7 @@ public:
     void build (void*);
     void build_with_params(float height, float x_rad_t, float
                            y_rad_t, float x_rad_b, float y_rad_b, float subdivisions);
+    void build_cylinder(float height, float radius, float subdivisions);
     void render(bool) const;
 };
 

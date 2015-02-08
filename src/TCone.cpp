@@ -23,6 +23,10 @@ void TCone::build_with_params(float height, float x_rad_t, float
     build((void*)0);
 }
 
+void TCone::build_cylinder(float height, float radius, float subdivisions){
+    build_with_parameters(height, radius, radius, radius, radius, subdivisions);
+}
+
 void TCone::build(void* data) {
     
     glGenBuffers(1, &vertex_buffer);
