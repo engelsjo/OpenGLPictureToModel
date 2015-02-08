@@ -105,7 +105,6 @@ void Cube::render(bool outline) const {
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, index_buffer);
     /* render the polygon */
     glPolygonMode(GL_FRONT, GL_FILL);
-    glColor3ub (255, 0, 0);
     glDrawRangeElements(GL_QUADS, 0, 0, top_count, GL_UNSIGNED_SHORT, 0);
 
     glBindBuffer(GL_ARRAY_BUFFER, 0);
