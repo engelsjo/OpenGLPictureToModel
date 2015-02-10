@@ -8,7 +8,10 @@
 
 #ifndef __ProjectOne__PalmTree__
 #define __ProjectOne__PalmTree__
+<<<<<<< HEAD
 
+=======
+>>>>>>> 289e7665eba1f40ecad44c4f6eb88803c59b91d0
 
 #include <stdio.h>
 #include "BufferObject.h"

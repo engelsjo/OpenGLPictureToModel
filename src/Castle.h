@@ -13,7 +13,10 @@
 #include "TCone.h"
 #include "Cone.h"
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 289e7665eba1f40ecad44c4f6eb88803c59b91d0
 class Castle : public BufferObject {
 private:
 	Cube castle;
