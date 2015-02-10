@@ -10,10 +10,13 @@
 #include <cmath>
 
 using glm::vec3;
-void Cone::build_with_params(float radius, float height, float subdivisions){
+void Cone::build_with_params(float radius, float height, float subdivisions, float r, float g, float b){
     RADIUS = radius;
     HEIGHT = height;
     SUB_DIVIDE = subdivisions;
+    COLOR_R = r;
+    COLOR_G = g;
+    COLOR_B = b;
     build((void*)0);
 }
 
@@ -35,13 +38,13 @@ void Cone::build(void* data) {
         float y = RADIUS * sin(angle);
         vec3 v0 = vec3{x, y, 0};
         all_points.push_back(v0);
-        all_colors.push_back(vec3{.3, abs(cos(x)), abs(sin(y))});
+        all_colors.push_back(vec3{COLOR_R, COLOR_G, COLOR_B});
         angle += delta;
     }
     all_points.push_back(topPt);
-    all_colors.push_back(vec3{.999, 0.0, 0.0});
+    all_colors.push_back(vec3{10, 10, 10});
     all_points.push_back(centerPt);
-    all_colors.push_back(vec3{1.0, .9, 1.0});
+    all_colors.push_back(vec3{10, 10, 10});
     
     /**************    'side' wrapping of cone'    **************/
     all_index.push_back(SUB_DIVIDE); //top point is center of triangle fan
