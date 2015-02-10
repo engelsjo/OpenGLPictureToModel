@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cmath>
 #include <algorithm>
+#include <ctime>
+#include <time.h>
 
 #define GLEW_STATIC
 #include <GL/glew.h>
@@ -44,7 +46,7 @@ Wall wall;
 Cube ground;
 Gate gate;
 
-std::clock start_time;
+std::clock_t start_time;
 
 glm::mat4 camera_cf;
 using namespace std;
@@ -102,12 +104,12 @@ void win_refresh (GLFWwindow *win) {
 
     for(int i = 0; i < 10; i++) {
         float angle = i * M_PI / 10.0;
-	bool launching = false; //TODO: add random variable for launch bool
-	glPushMatrix();
-	glTranslatef(70 * cos(angle) * FOOT, 70 * sin(angle) * FOOT, 0);
-	glRotatef(i*180/10 - 180, 0, 0, 1);
-	trebuchet.render(launching);
-	glPopMatrix();
+        bool launching = false; //TODO: add random variable for launch bool
+        glPushMatrix();
+        glTranslatef(70 * cos(angle) * FOOT, 70 * sin(angle) * FOOT, 0);
+        glRotatef(i*180/10 - 180, 0, 0, 1);
+        trebuchet.render(launching);
+        glPopMatrix();
     }
     
     /* must swap buffer at the end of render function */
@@ -127,6 +129,10 @@ void key_handler (GLFWwindow *win, int key, int scan_code, int action, int mods)
                 glfwSetWindowShouldClose(win, true);
                 break;
             case GLFW_KEY_0:
+            case GLFW_KEY_W:
+                break;
+            case GLFW_KEY_P:
+                break;
             case GLFW_KEY_1:
             case GLFW_KEY_2:
             case GLFW_KEY_3:
@@ -208,17 +214,17 @@ void init_gl() {
     glLineWidth(3.0);
     
     /* place the camera at Z=+5 (notice that the sign is OPPOSITE!) */
-    camera_cf *= glm::translate(glm::vec3{0, 0, -5});
+    camera_cf *= glm::translate(glm::vec3{0, 0, -10});
 }
 
 void make_model() {
     int N = 0;
-    castle.build(void*);
-    trebuchet.build(void*);
-    house.build(void*);
-    ram.build(void*);
-    wall.build(void*);
-    gate.build(void*);
+    castle.build((void*)&N);
+    trebuchet.build((void*)&N);
+    house.build((void*)&N);
+    ram.build((void*)&N);
+    wall.build((void*)&N);
+    gate.build((void*)&N);
     ground.build_with_params(2*FOOT, 200 * FOOT, 200 * FOOT, 0, 102, 0);
 }
 
