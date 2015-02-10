@@ -19,13 +19,16 @@ private:
     float y_rad_top = 1.5;
     float x_rad_bot = 3.0;
     float y_rad_bot = 1.5;
+    float COLOR_R = 255;
+    float COLOR_G = 255;
+    float COLOR_B = 255;
     
 protected:
 public:
     void build (void*);
     void build_with_params(float height, float x_rad_t, float
-                           y_rad_t, float x_rad_b, float y_rad_b, float subdivisions);
-    void build_cylinder(float height, float radius, float subdivisions);
+                           y_rad_t, float x_rad_b, float y_rad_b, float subdivisions, float r, float g, float b);
+    void build_cylinder(float height, float radius, float subdivisions, float r, float g, float b);
     void render(bool) const;
 };
 

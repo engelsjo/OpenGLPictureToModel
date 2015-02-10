@@ -39,11 +39,14 @@ void Cone::build(void* data) {
         vec3 v0 = vec3{x, y, 0};
         all_points.push_back(v0);
         all_colors.push_back(vec3{COLOR_R, COLOR_G, COLOR_B});
+        //all_colors.push_back(glm::vec3{.3, abs(cos(x)), abs(sin(y))});
         angle += delta;
     }
     all_points.push_back(topPt);
     all_colors.push_back(vec3{10, 10, 10});
+    //all_colors.push_back(glm::vec3{.999, 0, 0});
     all_points.push_back(centerPt);
+    //all_colors.push_back(vec3{1, .9, 1});
     all_colors.push_back(vec3{10, 10, 10});
     
     /**************    'side' wrapping of cone'    **************/
@@ -110,15 +113,12 @@ void Cone::render(bool outline) const {
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, index_buffer);
     /* render the polygon */
     glPolygonMode(GL_FRONT, GL_FILL);
-    glColor3ub (255, 0, 0);
     int N = SUB_DIVIDE + 2;
     glDrawElements(GL_TRIANGLE_FAN, N, GL_UNSIGNED_SHORT, 0);
     glDrawElements(GL_TRIANGLE_FAN, SUB_DIVIDE + 2, GL_UNSIGNED_SHORT, (void*) (sizeof(GLushort) * N));
     
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-    
-    glEnableClientState(GL_COLOR_ARRAY);
     
     glPopAttrib();
 }

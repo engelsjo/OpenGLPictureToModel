@@ -10,7 +10,7 @@
 
 using glm::vec3;
 void TCone::build_with_params(float height, float x_rad_t, float
-                              y_rad_t, float x_rad_b, float y_rad_b, float subdivisions){
+                              y_rad_t, float x_rad_b, float y_rad_b, float subdivisions, float r, float g, float b){
     CONE_HEIGHT = height;
     
     x_rad_top = x_rad_t;
@@ -20,17 +20,23 @@ void TCone::build_with_params(float height, float x_rad_t, float
     y_rad_bot = y_rad_b;
     
     N_POINTS = subdivisions;
+    
+    COLOR_R = r;
+    COLOR_G = g;
+    COLOR_B = b;
+    
     build((void*)0);
 }
 
-void TCone::build_cylinder(float height, float radius, float subdivisions){
-    build_with_params(height, radius, radius, radius, radius, subdivisions);
+void TCone::build_cylinder(float height, float radius, float subdivisions, float r, float g, float b){
+    build_with_params(height, radius, radius, radius, radius, subdivisions, r, g, b);
 }
 
 void TCone::build(void* data) {
     
     glGenBuffers(1, &vertex_buffer);
     glGenBuffers(1, &index_buffer);
+    glGenBuffers(1, &color_buffer);
     
     float delta  = 2 * M_PI / N_POINTS;
     float angle = 0;
@@ -39,6 +45,7 @@ void TCone::build(void* data) {
         float y = y_rad_top * sin(angle);
         vec3 vertex = vec3{x, y, CONE_HEIGHT};
         all_points.push_back(vertex);
+        all_colors.push_back(vec3{COLOR_R, COLOR_G, COLOR_B});
         angle += delta;
     }
     
@@ -47,11 +54,14 @@ void TCone::build(void* data) {
         float y = y_rad_bot * sin(angle);
         vec3 vertex = vec3{x, y, -CONE_HEIGHT};
         all_points.push_back(vertex);
+        all_colors.push_back(vec3{COLOR_R + 25, COLOR_G + 25, COLOR_B + 25});
         angle += delta;
     }
     vec3 top_center = vec3{0, 0, CONE_HEIGHT}; //origin
     all_points.push_back(top_center);
+    all_colors.push_back(vec3{COLOR_R -10, COLOR_G -10, COLOR_B -10});
     vec3 bot_center = vec3{0, 0, -CONE_HEIGHT};
+    all_colors.push_back(vec3{COLOR_R + 15, COLOR_G + 15, COLOR_B + 15});
     all_points.push_back(bot_center);
     
     
@@ -93,6 +103,21 @@ void TCone::build(void* data) {
     glUnmapBuffer(GL_ARRAY_BUFFER);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     
+    glBindBuffer(GL_ARRAY_BUFFER, color_buffer);
+    glBufferData(GL_ARRAY_BUFFER, all_colors.size() * sizeof(float) * 3, NULL, GL_DYNAMIC_DRAW);
+    float *color_ptr = (float *) glMapBuffer(GL_ARRAY_BUFFER, GL_WRITE_ONLY);
+    
+    /* Initialize the vertices */
+    float *cptr = color_ptr;
+    for (auto v : all_colors) {
+        cptr[0] = v.x;
+        cptr[1] = v.y;
+        cptr[2] = v.z;
+        cptr += 3;
+    }
+    glUnmapBuffer(GL_ARRAY_BUFFER);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    
     /* Initialize the indices */
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, index_buffer);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, all_index.size() * sizeof(GLushort), all_index.data(), GL_DYNAMIC_DRAW);
@@ -100,10 +125,12 @@ void TCone::build(void* data) {
 }
 
 void TCone::render(bool outline) const {
+    glPushAttrib(GL_ENABLE_BIT);
     /* bind vertex buffer */
     glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer);
     glVertexPointer(3, GL_FLOAT, 0, 0);
-    glDisableClientState(GL_COLOR_ARRAY);
+    glBindBuffer(GL_ARRAY_BUFFER, color_buffer);
+    glColorPointer(3, GL_FLOAT, 0, 0);
     
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, index_buffer);
     /* render the polygon */
@@ -118,6 +145,5 @@ void TCone::render(bool outline) const {
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     
-    glEnableClientState(GL_COLOR_ARRAY);
-    
+    glPopAttrib();
 }
