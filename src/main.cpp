@@ -29,6 +29,8 @@
 #include "Wall.h"
 #include "Gate.h"
 #include "Ram.h"
+#include "Sphere.h"
+#include "PalmTree.h"
 #include "Cube.h" //for the ground surface
 
 #define FOOT .1
@@ -45,10 +47,14 @@ Castle castle;
 Wall wall;
 Cube ground;
 Gate gate;
+Sphere projectile;
+PalmTree tree;
+int tree_x1[25], tree_x2[25], tree_x3[25], tree_y1[25], tree_y2[25], tree_y3[25];
 
 std::clock_t start_time;
 
 glm::mat4 camera_cf;
+glm::mat4 original_camera_cf;
 using namespace std;
 void err_function (int what, const char *msg) {
     cerr << what << " " << msg << endl;
@@ -77,11 +83,47 @@ void win_resize (GLFWwindow * win, int width, int height)
 }
 
 void win_refresh (GLFWwindow *win) {
-    double time_elapsed = (clock() - start_time) / (double) CLOCKS_PER_SEC;
-    if(time_elapsed > 60) // if the time passes the end of the camera motion
+    float time_elapsed = 10*(clock() - start_time) / (double) CLOCKS_PER_SEC;//sped up 3 times
+    if(time_elapsed > 60) {// if the time passes the end of the camera motion
         start_time = clock(); // reset time
+    }
     else {
-        //TODO: manipulate camera based on elapsed time
+        //If moving to point 2
+        if(time_elapsed < 20) {
+            camera_cf = original_camera_cf * glm::rotate(-160.0f/20/180 * (float)M_PI * time_elapsed, glm::vec3{0,0,1});
+        }
+        //If moving to point 3
+        else if(time_elapsed < 30) {
+            time_elapsed -= 20;
+            camera_cf = original_camera_cf * glm::rotate(-160.0f/180 * (float)M_PI, glm::vec3{0,0,1});
+            camera_cf *= glm::rotate(-80.0f/10/180 * (float)M_PI * time_elapsed, glm::vec3{0,1,0});
+        }
+        //If moving to point 4
+        else if (time_elapsed < 45) {
+            if(time_elapsed < 7.5) {
+                camera_cf = glm::translate(glm::vec3{(20.0f/7.5f/180*time_elapsed*M_PI)*FOOT,0,0}) * camera_cf;
+            }
+            else{
+                time_elapsed -= 7.5;
+                camera_cf = glm::translate(glm::vec3{(20.0f/180*M_PI)*FOOT,0,0}) * camera_cf;
+                camera_cf = glm::translate(glm::vec3{(-20.0f/7.5f/180*time_elapsed*M_PI)*FOOT,0,0}) * camera_cf;
+            }
+        }
+        //If returning to point 1
+        else {
+            time_elapsed -= 30;
+            camera_cf = original_camera_cf * glm::rotate(-160.0f/180 * (float)M_PI, glm::vec3{0,0,1});
+            camera_cf *= glm::rotate(-60.0f/180 * (float)M_PI, glm::vec3{0,1,0});
+            
+            if(time_elapsed < 5) {
+                camera_cf = glm::rotate(-180/5.0f/180 * (float)M_PI * time_elapsed, glm::vec3{0,0,1}) * camera_cf;
+            }
+            else {
+                time_elapsed -= 5;
+                camera_cf = glm::rotate(-180.0f/180 * (float)M_PI, glm::vec3{0,0,1}) * camera_cf;
+                camera_cf *= glm::rotate(-90.0f/10/180 * time_elapsed * (float) M_PI, glm::vec3{0,1,0});
+            }
+        }
     }
 
     //    cout << __PRETTY_FUNCTION__ << endl;
@@ -101,16 +143,107 @@ void win_refresh (GLFWwindow *win) {
     glPushMatrix();
     castle.render(false);
     glPopMatrix();
+    
+    srand(clock());
 
-    for(int i = 0; i < 10; i++) {
+    //render ring of trebuchets
+    for(int i = 0; i < 11; i++) {
         float angle = i * M_PI / 10.0;
-        bool launching = false; //TODO: add random variable for launch bool
+        bool launching = rand() % 2;
         glPushMatrix();
-        glTranslatef(70 * cos(angle) * FOOT, 70 * sin(angle) * FOOT, 0);
+        glTranslatef(140 * cos(angle) * FOOT, 140 * sin(angle) * FOOT, 0);
         glRotatef(i*180/10 - 180, 0, 0, 1);
         trebuchet.render(launching);
+        
+        //render projectile
+        if(launching) {
+            int t = rand() % 50;
+            glTranslatef((20 + t * 100 / 50.0) * FOOT, 0, (50 + (490 * t - 9.8 * t * t)/50.0) * FOOT);
+            projectile.render(false);
+        }
+        
         glPopMatrix();
     }
+    
+    //render gate
+    glPushMatrix();
+    glTranslatef(0,40*FOOT,0);
+    gate.render(false);
+    glPopMatrix();
+    
+    //render square of walls
+    for(int i = 0; i < 9; i++) {
+        if(i < 3 || i > 5) {
+            glPushMatrix();
+            glTranslatef( (40 - 10 * i)*FOOT, 40*FOOT, 0);
+            wall.render(false);
+            glPopMatrix();
+        }
+    }
+    
+    for(int i = 0; i < 9; i++) {
+        glPushMatrix();
+        glTranslatef( (40 - 10 * i)*FOOT, -110*FOOT, 0);
+        wall.render(false);
+        glPopMatrix();
+    }
+    
+    for(int i = 0; i < 15; i++) {
+        glPushMatrix();
+        glTranslatef(42.5*FOOT, (35 - 10 * i)*FOOT, 0);
+        glRotatef(90, 0, 0, 1);
+        wall.render(false);
+        glPopMatrix();
+    }
+    
+    
+    for(int i = 0; i < 15; i++) {
+        glPushMatrix();
+        glTranslatef(-42.5*FOOT, (35 - 10 * i)*FOOT, 0);
+        glRotatef(90, 0, 0, 1);
+        wall.render(false);
+        glPopMatrix();
+    }
+    
+    //render grid of houses
+    for(int x = -30; x <= 30; x+=20) {
+        for(int y = -30; y >= -70; y-=20) {
+            glPushMatrix();
+            glTranslatef((x-2.5)*FOOT, y*FOOT, 0);
+            glRotatef(90, 1,0,0);
+            house.render(false);
+            glPopMatrix();
+        }
+    }
+    
+    //render rams
+    for (int i = 0; i < 5; i++) {
+        int y = 48 + rand() % 7;
+        glPushMatrix();
+        glTranslatef((30 - 15*i)*FOOT, y*FOOT, 0);
+        glRotatef(-90, 0, 0, 1);
+        ram.render(false);
+        glPopMatrix();
+    }
+    
+    //render palm trees
+    for(int i = 0; i < 25; i++) {
+        glPushMatrix();
+        glTranslatef(tree_x1[i] * FOOT, tree_y1[i] * FOOT, 0);
+        tree.render(false);
+        glPopMatrix();
+        
+        glPushMatrix();
+        glTranslatef(tree_x2[i] * FOOT, tree_y2[i] * FOOT, 0);
+        tree.render(false);
+        glPopMatrix();
+        
+        glPushMatrix();
+        glTranslatef(tree_x3[i] * FOOT, tree_y3[i] * FOOT, 0);
+        tree.render(false);
+        glPopMatrix();
+    }
+    
     
     /* must swap buffer at the end of render function */
     glfwSwapBuffers(win);
@@ -120,7 +253,7 @@ void win_refresh (GLFWwindow *win) {
 void key_handler (GLFWwindow *win, int key, int scan_code, int action, int mods)
 {
     cout << __FUNCTION__ << endl;
-    if (action != GLFW_PRESS) return;
+    if (action != GLFW_PRESS) win_refresh(win);
     if (mods == GLFW_MOD_SHIFT) {
     }
     else {
@@ -216,18 +349,35 @@ void init_gl() {
     glLineWidth(3.0);
     
     /* place the camera at Z=+5 (notice that the sign is OPPOSITE!) */
-    camera_cf *= glm::translate(glm::vec3{0, 0, -10});
+    camera_cf *= glm::translate(glm::vec3{-180*FOOT, -70*FOOT, -45*FOOT});
+    camera_cf = glm::rotate(-95.0f/180*(float)M_PI, glm::vec3{0,0,1}) * camera_cf;
+    camera_cf = glm::rotate(-75.0f/180*(float)M_PI, glm::vec3{1, 0, 0}) * camera_cf;
+    camera_cf = glm::scale(glm::vec3 {.2,.2,.2}) * camera_cf;
+    original_camera_cf = camera_cf;
 }
 
 void make_model() {
-    int N = 0;
+    int N = 5;
     castle.build((void*)&N);
+    tree.build((void*)&N);
     trebuchet.build((void*)&N);
     house.build((void*)&N);
     ram.build((void*)&N);
     wall.build((void*)&N);
     gate.build((void*)&N);
-    ground.build_with_params(2*FOOT, 200 * FOOT, 200 * FOOT, 0, 102, 0);
+    projectile.setRadius(.5*FOOT);
+    projectile.build((void*)&N);
+    ground.build_with_params(2*FOOT, 400 * FOOT, 400 * FOOT, 0, 102, 0);
+    
+    srand(clock());
+    for(int i = 0; i < 25; i++) {
+        tree_x1[i] = -(rand() % 70) - 50;
+        tree_x2[i] = rand() % 100 - 50;
+        tree_x3[i] = rand() % 70 + 50;
+        tree_y1[i] = -(rand() % 140) - 30;
+        tree_y2[i] = -(rand() % 60) - 110;
+        tree_y3[i] = -(rand() % 140) - 30;
+    }
 }
 
 int main(){

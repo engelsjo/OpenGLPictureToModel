@@ -6,7 +6,6 @@
  */
 
 #include "Trebuchet.h"
-#define FOOT .1
 
 void Trebuchet::build(void*) {
 	long_beam.build_with_params(1 * FOOT, 10 * FOOT, 1 * FOOT, 70, 40, 10);
@@ -69,14 +68,14 @@ void Trebuchet::render(bool launching) const {
 	if(launching) {
 		glColor3ub(82, 41, 0);
 		glPushMatrix();
-		glTranslatef(-1.50*FOOT, 0,  11.25* FOOT);
+		glTranslatef(-1.75*FOOT, 0,  10.75* FOOT);
 		glRotatef(-60,0,1,0);
 		arm.render(false);
 		glPopMatrix();
 
 		glColor3ub(57, 52, 47);
 		glPushMatrix();
-		glTranslatef(1.00 *FOOT, 0,  6.93* FOOT);
+		glTranslatef(2.40 *FOOT, 0,  7.12* FOOT);
 		mass.render(false);
 		glPopMatrix();
 	}

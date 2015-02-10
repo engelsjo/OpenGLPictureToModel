@@ -7,7 +7,6 @@
 
 #ifndef GATE_H_
 #define GATE_H_
-#define FOOT .1
 
 #include "BufferObject.h"
 #include "Cube.h"

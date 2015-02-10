@@ -16,9 +16,9 @@ void Cube::build_with_params(float length, float width, float height, float r, f
     WIDTH = width;
     HEIGHT = height;
     
-    COLOR_R = r;
-    COLOR_G = g;
-    COLOR_B = b;
+    COLOR_R = r / 255.0f;
+    COLOR_G = g / 255.0f;
+    COLOR_B = b / 255.0f;
     
     build((void*)0);
 }
@@ -45,19 +45,19 @@ void Cube::build(void* data) {
     all_points.push_back(v0);
     all_colors.push_back(vec3{COLOR_R, COLOR_G, COLOR_B});
     all_points.push_back(v1);
-    all_colors.push_back(vec3{COLOR_R + 10, COLOR_G + 10, COLOR_B + 10});
+    all_colors.push_back(vec3{COLOR_R + 20/255.0f, COLOR_G + 20/255.0f, COLOR_B + 20/255.0f});
     all_points.push_back(v2);
-    all_colors.push_back(vec3{COLOR_R + 15, COLOR_G + 15, COLOR_B + 15});
+    all_colors.push_back(vec3{COLOR_R + 30/255.0f, COLOR_G + 30/255.0f, COLOR_B + 30/255.0f});
     all_points.push_back(v3);
-    all_colors.push_back(vec3{COLOR_R + 20, COLOR_G + 20, COLOR_B + 20});
+    all_colors.push_back(vec3{COLOR_R + 40/255.0f, COLOR_G + 40/255.0f, COLOR_B + 40/255.0f});
     all_points.push_back(v4);
-    all_colors.push_back(vec3{COLOR_R + 25, COLOR_G + 25, COLOR_B + 25});
+    all_colors.push_back(vec3{COLOR_R + 50/255.0f, COLOR_G + 50/255.0f, COLOR_B + 50/255.0f});
     all_points.push_back(v5);
-    all_colors.push_back(vec3{COLOR_R - 10, COLOR_G - 10, COLOR_B - 10});
+    all_colors.push_back(vec3{COLOR_R - 20/255.0f, COLOR_G - 20/255.0f, COLOR_B - 20/255.0f});
     all_points.push_back(v6);
-    all_colors.push_back(vec3{COLOR_R - 15, COLOR_G - 15, COLOR_B - 15});
+    all_colors.push_back(vec3{COLOR_R - 30/255.0f, COLOR_G - 30/255.0f, COLOR_B - 30/255.0f});
     all_points.push_back(v7);
-    all_colors.push_back(vec3{COLOR_R - 20, COLOR_G - 20, COLOR_B - 20});
+    all_colors.push_back(vec3{COLOR_R - 40/255.0f, COLOR_G - 40/255.0f, COLOR_B - 40/255.0f});
     
     for (GLushort i = 0; i < 4; i++){ //front face indices
         all_index.push_back(i);

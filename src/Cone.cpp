@@ -14,13 +14,15 @@ void Cone::build_with_params(float radius, float height, float subdivisions, flo
     RADIUS = radius;
     HEIGHT = height;
     SUB_DIVIDE = subdivisions;
-    COLOR_R = r;
-    COLOR_G = g;
-    COLOR_B = b;
+    COLOR_R = r / 255.0f;
+    COLOR_G = g / 255.0f;
+    COLOR_B = b / 255.0f;
     build((void*)0);
 }
 
 void Cone::build(void* data) {
+    
+    float color_diff = 100;
     
     glGenBuffers(1, &vertex_buffer);
     glGenBuffers(1, &index_buffer);
@@ -43,11 +45,11 @@ void Cone::build(void* data) {
         angle += delta;
     }
     all_points.push_back(topPt);
-    all_colors.push_back(vec3{10, 10, 10});
+    all_colors.push_back(vec3{COLOR_R + color_diff/255.0f, COLOR_G+color_diff/255.0f, COLOR_B + color_diff/255.0f});
     //all_colors.push_back(glm::vec3{.999, 0, 0});
     all_points.push_back(centerPt);
     //all_colors.push_back(vec3{1, .9, 1});
-    all_colors.push_back(vec3{10, 10, 10});
+    all_colors.push_back(vec3{COLOR_R - color_diff/255.0f, COLOR_G - color_diff/255.0f, COLOR_B - color_diff/255.0f});
     
     /**************    'side' wrapping of cone'    **************/
     all_index.push_back(SUB_DIVIDE); //top point is center of triangle fan

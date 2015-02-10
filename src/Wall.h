@@ -7,7 +7,6 @@
 
 #ifndef WALL_H_
 #define WALL_H_
-#define FOOT .1
 
 #include "BufferObject.h"
 #include "Cube.h"

@@ -28,10 +28,10 @@ void PalmTree::build(void*){
     cyl4.build_with_params(5*FOOT, .6 * FOOT, .6 * FOOT, .7 * FOOT, .7 * FOOT, 25.0, 102, 51, 0);
     cyl5.build_with_params(5*FOOT, .5 * FOOT, .5 * FOOT, .6 * FOOT, .6 * FOOT, 25.0, 102, 51, 0);
     
-    leaf1.build_with_params(.01*FOOT, 4 * FOOT, FOOT, 4 * FOOT, FOOT, 25.0, 102, 51, 0);
-    leaf2.build_with_params(.01*FOOT, 4 * FOOT, FOOT, 4 * FOOT, FOOT, 25.0, 102, 51, 0);
-    leaf3.build_with_params(.01*FOOT, 4 * FOOT, FOOT, 4 * FOOT, FOOT, 25.0, 102, 51, 0);
-    leaf4.build_with_params(.01*FOOT, 4 * FOOT, FOOT, 4 * FOOT, FOOT, 25.0, 102, 51, 0);
+    leaf1.build_with_params(.01*FOOT, 4 * FOOT, FOOT, 4 * FOOT, FOOT, 25.0, 51, 202, 0);
+    leaf2.build_with_params(.01*FOOT, 4 * FOOT, FOOT, 4 * FOOT, FOOT, 25.0, 51, 202, 0);
+    leaf3.build_with_params(.01*FOOT, 4 * FOOT, FOOT, 4 * FOOT, FOOT, 25.0, 51, 202, 0);
+    leaf4.build_with_params(.01*FOOT, 4 * FOOT, FOOT, 4 * FOOT, FOOT, 25.0, 51, 202, 0);
     
 }
 

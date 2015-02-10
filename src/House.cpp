@@ -7,7 +7,6 @@
 //
 
 #include "House.h"
-#define FOOT .1
 
 Cube MainFrame;
 Cube MiddleRoofPc;

@@ -16,6 +16,7 @@
 #include <iostream>
 #include <stdexcept>
 #include <glm/glm.hpp>
+#define FOOT .1
 using namespace std;
 
 class BufferObject {
@@ -67,7 +68,6 @@ public:
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, index_buffer);
 
         /* render the polygon */
-        glPolygonMode(GL_FRONT, GL_FILL);
         glDrawElements(GL_TRIANGLES, all_index.size(), GL_UNSIGNED_SHORT, 0);
 
         if (draw_outline) {

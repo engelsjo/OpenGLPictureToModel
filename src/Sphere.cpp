@@ -59,10 +59,10 @@ void Sphere::init_model(int level) {
      CCW order
      */
 #if 1
-    all_points.emplace_back(0, 1, 1 / sqrt(2));
-    all_points.emplace_back(-1, 0, -1 / sqrt(2));
-    all_points.emplace_back(0, -1, 1 / sqrt(2));
-    all_points.emplace_back(+1, 0, -1 / sqrt(2));
+    all_points.emplace_back(0, sphere_radius, sphere_radius / sqrt(2));
+    all_points.emplace_back(-sphere_radius, 0, -sphere_radius / sqrt(2));
+    all_points.emplace_back(0, -sphere_radius, sphere_radius / sqrt(2));
+    all_points.emplace_back(+sphere_radius, 0, -sphere_radius / sqrt(2));
 #endif
 #if 0
     all_points.emplace_back (1, 1, 1);
@@ -81,9 +81,9 @@ void Sphere::init_model(int level) {
     all_points.emplace_back (-r3, +0.5, -r2);
 #endif
     all_colors.emplace_back(1.0f, 1.0f, 1.0f);
-    all_colors.emplace_back(1.0f, 0.2f, 0.2f);
-    all_colors.emplace_back(0.2f, 1.0f, 0.2f);
-    all_colors.emplace_back(0.2f, 0.2f, 1.0f);
+    all_colors.emplace_back(0.5f, 0.5f, 0.5f);
+    all_colors.emplace_back(0.2f, 0.2f, 0.2f);
+    all_colors.emplace_back(0.5f, 0.5f, 0.5f);
     
     sphere_radius = glm::l1Norm(all_points[0]);
     /* be sure the order of these numbers makes a CCW face */

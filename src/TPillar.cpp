@@ -18,9 +18,9 @@ void TPillar::build_with_params(float length, float width, float height, float r
     WIDTH = width;
     HEIGHT = height;
     
-    COLOR_R = r;
-    COLOR_G = g;
-    COLOR_B = b;
+    COLOR_R = r / 255.0f;
+    COLOR_G = g / 255.0f;
+    COLOR_B = b / 255.0f;
     
     build((void*)0);
 }
@@ -41,11 +41,11 @@ void TPillar::build(void* data) {
     
     //get 6 colors
     all_colors.push_back(vec3{COLOR_R, COLOR_G, COLOR_B});
-    all_colors.push_back(vec3{COLOR_R-10, COLOR_G-10, COLOR_B-10});
-    all_colors.push_back(vec3{COLOR_R+10, COLOR_G+10, COLOR_B+10});
-    all_colors.push_back(vec3{COLOR_R-15, COLOR_G-15, COLOR_B-15});
-    all_colors.push_back(vec3{COLOR_R+15, COLOR_G+15, COLOR_B+15});
-    all_colors.push_back(vec3{COLOR_R-20, COLOR_G-20, COLOR_B-20});
+    all_colors.push_back(vec3{COLOR_R-10/255.0f, COLOR_G-10/255.0f, COLOR_B-10/255.0f});
+    all_colors.push_back(vec3{COLOR_R+10/255.0f, COLOR_G+10/255.0f, COLOR_B+10/255.0f});
+    all_colors.push_back(vec3{COLOR_R-15/255.0f, COLOR_G-15/255.0f, COLOR_B-15/255.0f});
+    all_colors.push_back(vec3{COLOR_R+15/255.0f, COLOR_G+15/255.0f, COLOR_B+15/255.0f});
+    all_colors.push_back(vec3{COLOR_R-20/255.0f, COLOR_G-20/255.0f, COLOR_B-20/255.0f});
     
     all_points.push_back(v0); //add vertices
     all_points.push_back(v1);

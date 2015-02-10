@@ -21,9 +21,9 @@ void TCone::build_with_params(float height, float x_rad_t, float
     
     N_POINTS = subdivisions;
     
-    COLOR_R = r;
-    COLOR_G = g;
-    COLOR_B = b;
+    COLOR_R = r / 255.0f;
+    COLOR_G = g / 255.0f;
+    COLOR_B = b / 255.0f;
     
     build((void*)0);
 }
@@ -54,14 +54,14 @@ void TCone::build(void* data) {
         float y = y_rad_bot * sin(angle);
         vec3 vertex = vec3{x, y, -CONE_HEIGHT};
         all_points.push_back(vertex);
-        all_colors.push_back(vec3{COLOR_R + 25, COLOR_G + 25, COLOR_B + 25});
+        all_colors.push_back(vec3{COLOR_R + 25/255.0f, COLOR_G + 25/255.0f, COLOR_B + 25/255.0f});
         angle += delta;
     }
     vec3 top_center = vec3{0, 0, CONE_HEIGHT}; //origin
     all_points.push_back(top_center);
-    all_colors.push_back(vec3{COLOR_R -10, COLOR_G -10, COLOR_B -10});
+    all_colors.push_back(vec3{COLOR_R -10/255.0f, COLOR_G -10/255.0f, COLOR_B -10/255.0f});
     vec3 bot_center = vec3{0, 0, -CONE_HEIGHT};
-    all_colors.push_back(vec3{COLOR_R + 15, COLOR_G + 15, COLOR_B + 15});
+    all_colors.push_back(vec3{COLOR_R + 15/255.0f, COLOR_G + 15/255.0f, COLOR_B + 15/255.0f});
     all_points.push_back(bot_center);
     
     

@@ -13,7 +13,6 @@
 #include "TCone.h"
 #include "Cone.h"
 
-#define FOOT .1
 
 class Castle : public BufferObject {
 private:
