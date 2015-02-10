@@ -18,13 +18,15 @@
 #include <glm/gtx/io.hpp>
 #undef GLFW_DLL
 #include <GLFW/glfw3.h>
-#include "Cube.h"
+#include "House.h"
+//#include "TPillar.h"
 
 void init_model();
 void win_refresh(GLFWwindow*);
 float arc_ball_rad_square;
 int screen_ctr_x, screen_ctr_y;
-Cube one;
+
+House one;
 
 glm::mat4 camera_cf;
 using namespace std;
@@ -186,7 +188,7 @@ void init_gl() {
 
 void make_model() {
     int N = 0;
-    one.build ((void *)&N);
+    one.build((void*)0);
 }
 
 int main(){

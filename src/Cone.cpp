@@ -10,10 +10,13 @@
 #include <cmath>
 
 using glm::vec3;
-void Cone::build_with_params(float radius, float height, float subdivisions){
+void Cone::build_with_params(float radius, float height, float subdivisions, float r, float g, float b){
     RADIUS = radius;
     HEIGHT = height;
     SUB_DIVIDE = subdivisions;
+    COLOR_R = r;
+    COLOR_G = g;
+    COLOR_B = b;
     build((void*)0);
 }
 
@@ -21,6 +24,7 @@ void Cone::build(void* data) {
     
     glGenBuffers(1, &vertex_buffer);
     glGenBuffers(1, &index_buffer);
+    glGenBuffers(1, &color_buffer);
     
     vec3 topPt = vec3{0, 0, HEIGHT};
     vec3 centerPt = vec3{0, 0, 0};
@@ -34,10 +38,13 @@ void Cone::build(void* data) {
         float y = RADIUS * sin(angle);
         vec3 v0 = vec3{x, y, 0};
         all_points.push_back(v0);
+        all_colors.push_back(vec3{COLOR_R, COLOR_G, COLOR_B});
         angle += delta;
     }
     all_points.push_back(topPt);
+    all_colors.push_back(vec3{10, 10, 10});
     all_points.push_back(centerPt);
+    all_colors.push_back(vec3{10, 10, 10});
     
     /**************    'side' wrapping of cone'    **************/
     all_index.push_back(SUB_DIVIDE); //top point is center of triangle fan
@@ -52,6 +59,7 @@ void Cone::build(void* data) {
         all_index.push_back(i);
     }
     all_index.push_back(SUB_DIVIDE - 1); //wrap around
+    
     
     glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer);
     glBufferData(GL_ARRAY_BUFFER, all_points.size() * sizeof(float) * 3, NULL, GL_DYNAMIC_DRAW);
@@ -68,6 +76,22 @@ void Cone::build(void* data) {
     glUnmapBuffer(GL_ARRAY_BUFFER);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     
+    glBindBuffer(GL_ARRAY_BUFFER, color_buffer); //init the color buffer
+    glBufferData(GL_ARRAY_BUFFER, all_colors.size() * sizeof(float) * 3, NULL, GL_DYNAMIC_DRAW);
+    float *color_ptr = (float *) glMapBuffer(GL_ARRAY_BUFFER, GL_WRITE_ONLY);
+    
+    /* Initialize the vertices */
+    float *p = color_ptr;
+    for (auto v : all_colors) {
+        p[0] = v.x;
+        p[1] = v.y;
+        p[2] = v.z;
+        p += 3;
+    }
+    glUnmapBuffer(GL_ARRAY_BUFFER);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    
+    
     /* Initialize the indices */
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, index_buffer);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, all_index.size() * sizeof(GLushort), all_index.data(), GL_DYNAMIC_DRAW);
@@ -76,10 +100,12 @@ void Cone::build(void* data) {
 }
 
 void Cone::render(bool outline) const {
+    glPushAttrib(GL_ENABLE_BIT);
     /* bind vertex buffer */
     glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer);
     glVertexPointer(3, GL_FLOAT, 0, 0);
-    glDisableClientState(GL_COLOR_ARRAY);
+    glBindBuffer(GL_ARRAY_BUFFER, color_buffer);
+    glColorPointer(3, GL_FLOAT, 0, 0);
     
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, index_buffer);
     /* render the polygon */
@@ -93,5 +119,6 @@ void Cone::render(bool outline) const {
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     
     glEnableClientState(GL_COLOR_ARRAY);
-
+    
+    glPopAttrib();
 }
