@@ -33,6 +33,8 @@
 #include "PalmTree.h"
 #include "Cube.h" //for the ground surface
 
+#define FOOT .1
+
 void init_model();
 void win_refresh(GLFWwindow*);
 float arc_ball_rad_square;

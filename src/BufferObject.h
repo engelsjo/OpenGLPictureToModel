@@ -16,13 +16,7 @@
 #include <iostream>
 #include <stdexcept>
 #include <glm/glm.hpp>
-<<<<<<< HEAD
 #define FOOT .1
-=======
-
-#define FOOT 0.1
-
->>>>>>> 289e7665eba1f40ecad44c4f6eb88803c59b91d0
 using namespace std;
 
 class BufferObject {
