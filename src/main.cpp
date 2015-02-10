@@ -18,15 +18,33 @@
 #include <glm/gtx/io.hpp>
 #undef GLFW_DLL
 #include <GLFW/glfw3.h>
+
+#include <math.h>
+
 #include "House.h"
-//#include "TPillar.h"
+#include "Trebuchet.h"
+#include "Castle.h"
+#include "Wall.h"
+#include "Gate.h"
+#include "Ram.h"
+#include "Cube.h" //for the ground surface
+
+#define FOOT .1
 
 void init_model();
 void win_refresh(GLFWwindow*);
 float arc_ball_rad_square;
 int screen_ctr_x, screen_ctr_y;
 
-House one;
+House house;
+Trebuchet trebuchet;
+Ram ram;
+Castle castle;
+Wall wall;
+Cube ground;
+Gate gate;
+
+std::clock start_time;
 
 glm::mat4 camera_cf;
 using namespace std;
@@ -57,6 +75,13 @@ void win_resize (GLFWwindow * win, int width, int height)
 }
 
 void win_refresh (GLFWwindow *win) {
+    double time_elapsed = (clock() - start_time) / (double) CLOCKS_PER_SEC;
+    if(time_elapsed > 60) // if the time passes the end of the camera motion
+        start_time = clock(); // reset time
+    else {
+        //TODO: manipulate camera based on elapsed time
+    }
+
     //    cout << __PRETTY_FUNCTION__ << endl;
     glClearColor(0, 0, 0, 1);
     glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
@@ -66,24 +91,24 @@ void win_refresh (GLFWwindow *win) {
     /* place the camera using the camera coordinate frame */
     glMultMatrixf (glm::value_ptr(camera_cf));
     
-    const float& S = 5.0;
-    /* draw the axes */
-    glBegin(GL_LINES);
-    glColor3ub (255, 0, 0);
-    glVertex2i (0, 0);
-    glVertex2f (S * 1.1, 0);
-    glColor3ub (0, 255, 0);
-    glVertex2i (0, 0);
-    glVertex2f (0, S * 1.1);
-    glColor3ub (0, 0, 255);
-    glVertex2i (0, 0);
-    glVertex3f (0, 0, S * 1.1);
-    glEnd();
-    
-    glColor3ub (255, 0, 0);
     glPushMatrix();
-    one.render(true);  /* true: super impose the polygon outline */
+    glTranslatef(0, 0, -1);
+    ground.render(false);
     glPopMatrix();
+    
+    glPushMatrix();
+    castle.render(false);
+    glPopMatrix();
+
+    for(int i = 0; i < 10; i++) {
+        float angle = i * M_PI / 10.0;
+	bool launching = false; //TODO: add random variable for launch bool
+	glPushMatrix();
+	glTranslatef(70 * cos(angle) * FOOT, 70 * sin(angle) * FOOT, 0);
+	glRotatef(i*180/10 - 180, 0, 0, 1);
+	trebuchet.render(launching);
+	glPopMatrix();
+    }
     
     /* must swap buffer at the end of render function */
     glfwSwapBuffers(win);
@@ -188,7 +213,13 @@ void init_gl() {
 
 void make_model() {
     int N = 0;
-    one.build((void*)0);
+    castle.build(void*);
+    trebuchet.build(void*);
+    house.build(void*);
+    ram.build(void*);
+    wall.build(void*);
+    gate.build(void*);
+    ground.build_with_params(2*FOOT, 200 * FOOT, 200 * FOOT, 0, 102, 0);
 }
 
 int main(){
@@ -234,6 +265,7 @@ int main(){
     init_gl();
     make_model();
     
+    start_time = clock();
     win_refresh(win);
     while (!glfwWindowShouldClose(win)) {
         glfwWaitEvents();
