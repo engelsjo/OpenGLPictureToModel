@@ -27,15 +27,15 @@ void House::build (void*){
     
     MiddleRoofPc.build_with_params(24 * FOOT, 2 * FOOT, 10 * FOOT, 64, 64, 64);
     
-    roofHalf1.build_with_params(5 * FOOT, 24 * FOOT, 8 * FOOT);
+    roofHalf1.build_with_params(5 * FOOT, 24 * FOOT, 8 * FOOT,102, 51, 0);
     
-    roofHalf2.build_with_params(5 * FOOT, 24 * FOOT, 8 * FOOT);
+    roofHalf2.build_with_params(5 * FOOT, 24 * FOOT, 8 * FOOT,102, 51, 0);
     
     DoorPost1.build_with_params(1 * FOOT, 3 * FOOT, 10 * FOOT, 64, 64, 64);
     
     DoorPost2.build_with_params(1 * FOOT, 3 * FOOT, 10 * FOOT, 64, 64, 64);
     
-    roofHeader.build_with_params(7 * FOOT, 7 * FOOT, 7 * FOOT);
+    roofHeader.build_with_params(7 * FOOT, 7 * FOOT, 7 * FOOT, 64, 64, 64);
     
     Door.build_with_params(3 * FOOT, 1 * FOOT, 10 * FOOT, 255, 204, 153);
     

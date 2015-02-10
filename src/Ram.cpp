@@ -10,7 +10,7 @@
 void Ram::build(void*) {
 	cylinder.build_cylinder(3 * FOOT,.9 * FOOT, 30, 64, 64, 64);
 	cube.build_with_params(5 * FOOT, 9 * FOOT, 6 * FOOT, 70, 40, 10);
-	roof.build_with_params(3 * FOOT, 9 * FOOT, 3 * FOOT);
+	roof.build_with_params(3 * FOOT, 9 * FOOT, 3 * FOOT, 64, 64, 64);
 }
 
 void Ram::render(bool outline) const {

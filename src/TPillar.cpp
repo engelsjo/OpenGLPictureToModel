@@ -13,10 +13,15 @@
 
 using glm::vec3;
 
-void TPillar::build_with_params(float length, float width, float height){
+void TPillar::build_with_params(float length, float width, float height, float r, float g, float b){
     LENGTH = length;
     WIDTH = width;
     HEIGHT = height;
+    
+    COLOR_R = r;
+    COLOR_G = g;
+    COLOR_B = b;
+    
     build((void*)0);
 }
 
@@ -24,6 +29,7 @@ void TPillar::build(void* data) {
     
     glGenBuffers(1, &vertex_buffer);
     glGenBuffers(1, &index_buffer);
+    glGenBuffers(1, &color_buffer);
     
     //build the 6 vertexes
     vec3 v0 = vec3{0, 0, 0};
@@ -32,6 +38,14 @@ void TPillar::build(void* data) {
     vec3 v3 = vec3{0, WIDTH, 0};
     vec3 v4 = vec3{LENGTH, WIDTH, HEIGHT};
     vec3 v5 = vec3{LENGTH, 0, HEIGHT};
+    
+    //get 6 colors
+    all_colors.push_back(vec3{COLOR_R, COLOR_G, COLOR_B});
+    all_colors.push_back(vec3{COLOR_R-10, COLOR_G-10, COLOR_B-10});
+    all_colors.push_back(vec3{COLOR_R+10, COLOR_G+10, COLOR_B+10});
+    all_colors.push_back(vec3{COLOR_R-15, COLOR_G-15, COLOR_B-15});
+    all_colors.push_back(vec3{COLOR_R+15, COLOR_G+15, COLOR_B+15});
+    all_colors.push_back(vec3{COLOR_R-20, COLOR_G-20, COLOR_B-20});
     
     all_points.push_back(v0); //add vertices
     all_points.push_back(v1);
@@ -73,6 +87,21 @@ void TPillar::build(void* data) {
     glUnmapBuffer(GL_ARRAY_BUFFER);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     
+    glBindBuffer(GL_ARRAY_BUFFER, color_buffer);
+    glBufferData(GL_ARRAY_BUFFER, all_colors.size() * sizeof(float) * 3, NULL, GL_DYNAMIC_DRAW);
+    float *color_ptr = (float *) glMapBuffer(GL_ARRAY_BUFFER, GL_WRITE_ONLY);
+    
+    /* Initialize the vertices */
+    float *cptr = color_ptr;
+    for (auto v : all_colors) {
+        cptr[0] = v.x;
+        cptr[1] = v.y;
+        cptr[2] = v.z;
+        cptr += 3;
+    }
+    glUnmapBuffer(GL_ARRAY_BUFFER);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    
     /* Initialize the indices */
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, index_buffer);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, all_index.size() * sizeof(GLushort), all_index.data(), GL_DYNAMIC_DRAW);
@@ -80,10 +109,12 @@ void TPillar::build(void* data) {
 }
 
 void TPillar::render(bool outline) const {
+    glPushAttrib(GL_ENABLE_BIT);
     /* bind vertex buffer */
     glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer);
     glVertexPointer(3, GL_FLOAT, 0, 0);
-    glDisableClientState(GL_COLOR_ARRAY);
+    glBindBuffer(GL_ARRAY_BUFFER, color_buffer);
+    glColorPointer(3, GL_FLOAT, 0, 0);
     
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, index_buffer);
     /* render the polygon */
@@ -96,6 +127,6 @@ void TPillar::render(bool outline) const {
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     
-    glEnableClientState(GL_COLOR_ARRAY);
+    glPopAttrib();
     
 }

@@ -17,10 +17,15 @@ private:
     float WIDTH = .5;
     float HEIGHT = 1;
     
+    float COLOR_R = 255;
+    float COLOR_G = 255;
+    float COLOR_B = 255;
+    
+    
 protected:
 public:
     void build (void*);
-    void build_with_params(float length, float width, float height);
+    void build_with_params(float length, float width, float height, float r, float g, float b);
     void render(bool) const;
 };
 
