@@ -11,10 +11,15 @@
 /**** NOTE: Cube is centered in the middle of the cube ***** */
 
 using glm::vec3;
-void Cube::build_with_params(float length, float width, float height){
+void Cube::build_with_params(float length, float width, float height, float r, float g, float b){
     LENGTH = length;
     WIDTH = width;
     HEIGHT = height;
+    
+    COLOR_R = r;
+    COLOR_G = g;
+    COLOR_B = b;
+    
     build((void*)0);
 }
 
@@ -22,6 +27,7 @@ void Cube::build(void* data) {
     
     glGenBuffers(1, &vertex_buffer);
     glGenBuffers(1, &index_buffer);
+    glGenBuffers(1, &color_buffer);
     
     //front face
     vec3 v0 = vec3{-.5 * WIDTH, -.5 * HEIGHT, .5 * LENGTH};
@@ -37,13 +43,21 @@ void Cube::build(void* data) {
     
     //push back 8 vertices
     all_points.push_back(v0);
+    all_colors.push_back(vec3{COLOR_R, COLOR_G, COLOR_B});
     all_points.push_back(v1);
+    all_colors.push_back(vec3{COLOR_R + 10, COLOR_G + 10, COLOR_B + 10});
     all_points.push_back(v2);
+    all_colors.push_back(vec3{COLOR_R + 15, COLOR_G + 15, COLOR_B + 15});
     all_points.push_back(v3);
+    all_colors.push_back(vec3{COLOR_R + 20, COLOR_G + 20, COLOR_B + 20});
     all_points.push_back(v4);
+    all_colors.push_back(vec3{COLOR_R + 25, COLOR_G + 25, COLOR_B + 25});
     all_points.push_back(v5);
+    all_colors.push_back(vec3{COLOR_R - 10, COLOR_G - 10, COLOR_B - 10});
     all_points.push_back(v6);
+    all_colors.push_back(vec3{COLOR_R - 15, COLOR_G - 15, COLOR_B - 15});
     all_points.push_back(v7);
+    all_colors.push_back(vec3{COLOR_R - 20, COLOR_G - 20, COLOR_B - 20});
     
     for (GLushort i = 0; i < 4; i++){ //front face indices
         all_index.push_back(i);
@@ -87,6 +101,21 @@ void Cube::build(void* data) {
     glUnmapBuffer(GL_ARRAY_BUFFER);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     
+    glBindBuffer(GL_ARRAY_BUFFER, color_buffer);
+    glBufferData(GL_ARRAY_BUFFER, all_colors.size() * sizeof(float) * 3, NULL, GL_DYNAMIC_DRAW);
+    float *color_ptr = (float *) glMapBuffer(GL_ARRAY_BUFFER, GL_WRITE_ONLY);
+    
+    /* Initialize the vertices */
+    float *cptr = color_ptr;
+    for (auto v : all_colors) {
+        cptr[0] = v.x;
+        cptr[1] = v.y;
+        cptr[2] = v.z;
+        cptr += 3;
+    }
+    glUnmapBuffer(GL_ARRAY_BUFFER);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+    
     /* Initialize the indices */
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, index_buffer);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, all_index.size() * sizeof(GLushort), all_index.data(), GL_DYNAMIC_DRAW);
@@ -97,10 +126,12 @@ void Cube::build(void* data) {
 
 
 void Cube::render(bool outline) const {
+    glPushAttrib(GL_ENABLE_BIT);
     /* bind vertex buffer */
     glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer);
     glVertexPointer(3, GL_FLOAT, 0, 0);
-    glDisableClientState(GL_COLOR_ARRAY);
+    glBindBuffer(GL_ARRAY_BUFFER, color_buffer);
+    glColorPointer(3, GL_FLOAT, 0, 0);
     
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, index_buffer);
     /* render the polygon */
@@ -110,6 +141,5 @@ void Cube::render(bool outline) const {
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     
-    glEnableClientState(GL_COLOR_ARRAY);
-    
+    glPopAttrib();
 }

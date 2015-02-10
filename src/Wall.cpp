@@ -8,7 +8,7 @@
 #include "Wall.h"
 
 void Wall::build(void*) {
-	wall.build_with_params(10 * FOOT, 10 * FOOT, 5 * FOOT);
+	wall.build_with_params(10 * FOOT, 10 * FOOT, 5 * FOOT, 64, 64, 64);
 }
 
 void Wall::render(bool) const{

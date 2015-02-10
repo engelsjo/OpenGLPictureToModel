@@ -6,12 +6,13 @@
  */
 
 #include "Trebuchet.h"
+#define FOOT .1
 
 void Trebuchet::build(void*) {
-	long_beam.build_with_params(1 * FOOT, 10 * FOOT, 1 * FOOT);
-	short_beam.build_with_params(1 * FOOT, 1 * FOOT, 3 * FOOT);
-	mass.build_with_params(2 * FOOT, .5 * FOOT, .5 * FOOT, 2 * FOOT, 2 * FOOT, 30);
-	arm.build_cylinder(5*FOOT, .5 * FOOT, 30);
+	long_beam.build_with_params(1 * FOOT, 10 * FOOT, 1 * FOOT, 70, 40, 10);
+	short_beam.build_with_params(1 * FOOT, 1 * FOOT, 3 * FOOT, 75, 40, 10);
+	mass.build_with_params(2 * FOOT, .5 * FOOT, .5 * FOOT, 2 * FOOT, 2 * FOOT, 30, 64, 64, 64);
+	arm.build_cylinder(5*FOOT, .5 * FOOT, 30, 80, 40, 10);
 }
 
 void Trebuchet::render(bool launching) const {

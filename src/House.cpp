@@ -23,23 +23,23 @@ Cube Chimmeny;
 
 void House::build (void*){
     
-    MainFrame.build_with_params(20 * FOOT, 10 * FOOT, 10 * FOOT);
+    MainFrame.build_with_params(20 * FOOT, 10 * FOOT, 10 * FOOT, 123, 123, 123);
     
-    MiddleRoofPc.build_with_params(24 * FOOT, 2 * FOOT, 10 * FOOT);
+    MiddleRoofPc.build_with_params(24 * FOOT, 2 * FOOT, 10 * FOOT, 64, 64, 64);
     
     roofHalf1.build_with_params(5 * FOOT, 24 * FOOT, 8 * FOOT);
     
     roofHalf2.build_with_params(5 * FOOT, 24 * FOOT, 8 * FOOT);
     
-    DoorPost1.build_with_params(1 * FOOT, 3 * FOOT, 10 * FOOT);
+    DoorPost1.build_with_params(1 * FOOT, 3 * FOOT, 10 * FOOT, 64, 64, 64);
     
-    DoorPost2.build_with_params(1 * FOOT, 3 * FOOT, 10 * FOOT);
+    DoorPost2.build_with_params(1 * FOOT, 3 * FOOT, 10 * FOOT, 64, 64, 64);
     
     roofHeader.build_with_params(7 * FOOT, 7 * FOOT, 7 * FOOT);
     
-    Door.build_with_params(3 * FOOT, 1 * FOOT, 10 * FOOT);
+    Door.build_with_params(3 * FOOT, 1 * FOOT, 10 * FOOT, 255, 204, 153);
     
-    Chimmeny.build_with_params(4 * FOOT, 4 * FOOT, 8 * FOOT);
+    Chimmeny.build_with_params(4 * FOOT, 4 * FOOT, 8 * FOOT, 128, 128, 128);
 }
 
 

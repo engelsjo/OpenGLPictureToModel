@@ -8,9 +8,9 @@
 #include "Gate.h"
 
 void Gate::build(void*) {
-	side.build_with_params(15 * FOOT, 10 * FOOT, 5 * FOOT);
-	top.build_with_params(5 * FOOT, 10 * FOOT, 5 * FOOT);
-	gate.build_cylinder(5 * FOOT, .25 * FOOT, 30);
+	side.build_with_params(15 * FOOT, 10 * FOOT, 5 * FOOT, 96, 96, 96);
+	top.build_with_params(5 * FOOT, 10 * FOOT, 5 * FOOT, 96, 96, 96);
+	gate.build_cylinder(5 * FOOT, .25 * FOOT, 30, 64, 64, 64);
 }
 
 void Gate::render(bool) const {
