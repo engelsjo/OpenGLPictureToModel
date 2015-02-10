@@ -16,6 +16,9 @@
 #include <iostream>
 #include <stdexcept>
 #include <glm/glm.hpp>
+
+#define FOOT 0.1
+
 using namespace std;
 
 class BufferObject {

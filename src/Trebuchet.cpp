@@ -6,7 +6,6 @@
  */
 
 #include "Trebuchet.h"
-#define FOOT .1
 
 void Trebuchet::build(void*) {
 	long_beam.build_with_params(1 * FOOT, 10 * FOOT, 1 * FOOT, 70, 40, 10);

@@ -8,8 +8,6 @@
 
 #ifndef __ProjectOne__PalmTree__
 #define __ProjectOne__PalmTree__
-#define FOOT .1
-
 
 #include <stdio.h>
 #include "BufferObject.h"
