@@ -130,8 +130,10 @@ void key_handler (GLFWwindow *win, int key, int scan_code, int action, int mods)
                 break;
             case GLFW_KEY_0:
             case GLFW_KEY_W:
+                glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
                 break;
             case GLFW_KEY_P:
+                glPolygonMode(GL_FRONT, GL_FILL);
                 break;
             case GLFW_KEY_1:
             case GLFW_KEY_2:

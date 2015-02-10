@@ -117,8 +117,6 @@ void TPillar::render(bool outline) const {
     glColorPointer(3, GL_FLOAT, 0, 0);
     
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, index_buffer);
-    /* render the polygon */
-    glPolygonMode(GL_FRONT, GL_FILL);
     
     glDrawElements(GL_QUAD_STRIP, 8, GL_UNSIGNED_SHORT, 0);
     glDrawElements(GL_TRIANGLES, 3, GL_UNSIGNED_SHORT, (void*) (sizeof(GLushort) * 8));
