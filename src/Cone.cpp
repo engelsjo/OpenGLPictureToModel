@@ -111,8 +111,6 @@ void Cone::render(bool outline) const {
     glColorPointer(3, GL_FLOAT, 0, 0);
     
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, index_buffer);
-    /* render the polygon */
-    glPolygonMode(GL_FRONT, GL_FILL);
     int N = SUB_DIVIDE + 2;
     glDrawElements(GL_TRIANGLE_FAN, N, GL_UNSIGNED_SHORT, 0);
     glDrawElements(GL_TRIANGLE_FAN, SUB_DIVIDE + 2, GL_UNSIGNED_SHORT, (void*) (sizeof(GLushort) * N));
