@@ -94,7 +94,7 @@ void win_refresh (GLFWwindow *win) {
     glMultMatrixf (glm::value_ptr(camera_cf));
     
     glPushMatrix();
-    glTranslatef(0, 0, -1);
+    glTranslatef(0, 0, -1 * FOOT);
     ground.render(false);
     glPopMatrix();
     
