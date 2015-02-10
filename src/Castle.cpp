@@ -11,8 +11,8 @@ void Castle::build(void*) {
 	castle.build_with_params(60 * FOOT, 40 * FOOT, 40 * FOOT, 75, 75, 75);
 	tower.build_cylinder(5 * FOOT,  4* FOOT, 30, 200, 200, 200);
 	roof.build_with_params(6 * FOOT, 10 * FOOT, 30, 102, 0, 0);
-	bigTower.build_cylinder(10 * FOOT, 20 * FOOT, 30, 255, 255, 255);
-	bigRoof.build_with_params(25 * FOOT, 30 * FOOT, 30, 255, 0, 0);
+	bigTower.build_cylinder(10 * FOOT, 9 * FOOT, 30, 255, 255, 255);
+	bigRoof.build_with_params(12 * FOOT, 20 * FOOT, 30, 255, 0, 0);
 }
 
 void Castle::render(bool) const {

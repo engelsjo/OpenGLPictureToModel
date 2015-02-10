@@ -37,25 +37,25 @@ void Trebuchet::render(bool launching) const {
 	//render upright (angled) beams
 	glPushMatrix();
 	glTranslatef(-2.5*FOOT, 1.5*FOOT, 4.33 * FOOT);
-	glRotatef(60,0,1,0);
+	glRotatef(-60,0,1,0);
 	long_beam.render(false);
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(-2.5*FOOT, -1.5*FOOT,4.33*FOOT);
-	glRotatef(60,0,1,0);
+	glRotatef(-60,0,1,0);
 	long_beam.render(false);
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(2.5*FOOT, 1.5*FOOT, 4.33 * FOOT);
-	glRotatef(-60,0,1,0);
+	glRotatef(60,0,1,0);
 	long_beam.render(false);
 	glPopMatrix();
 
 	glPushMatrix();
 	glTranslatef(2.5*FOOT,-1.5*FOOT,4.33*FOOT);
-	glRotatef(-60,0,1,0);
+	glRotatef(60,0,1,0);
 	long_beam.render(false);
 	glPopMatrix();
 
