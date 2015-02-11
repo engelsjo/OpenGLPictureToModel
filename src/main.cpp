@@ -51,7 +51,15 @@ Sphere projectile;
 PalmTree tree;
 int tree_x1[25], tree_x2[25], tree_x3[25], tree_y1[25], tree_y2[25], tree_y3[25];
 
-std::clock_t start_time;
+float time_elapsed;
+
+//coordinate frames for the objects that we will select and use
+glm::mat4 ram1_cf;
+glm::mat4 ram2_cf;
+glm::mat4 ram3_cf;
+glm::mat4 ram4_cf;
+glm::mat4 ram5_cf;
+glm::mat4 * curr_ram;
 
 glm::mat4 camera_cf;
 glm::mat4 original_camera_cf;
@@ -83,48 +91,6 @@ void win_resize (GLFWwindow * win, int width, int height)
 }
 
 void win_refresh (GLFWwindow *win) {
-    float time_elapsed = 10*(clock() - start_time) / (double) CLOCKS_PER_SEC;//sped up 3 times
-    if(time_elapsed > 60) {// if the time passes the end of the camera motion
-        start_time = clock(); // reset time
-    }
-    else {
-        //If moving to point 2
-        if(time_elapsed < 20) {
-            camera_cf = original_camera_cf * glm::rotate(-160.0f/20/180 * (float)M_PI * time_elapsed, glm::vec3{0,0,1});
-        }
-        //If moving to point 3
-        else if(time_elapsed < 30) {
-            time_elapsed -= 20;
-            camera_cf = original_camera_cf * glm::rotate(-160.0f/180 * (float)M_PI, glm::vec3{0,0,1});
-            camera_cf *= glm::rotate(-80.0f/10/180 * (float)M_PI * time_elapsed, glm::vec3{0,1,0});
-        }
-        //If moving to point 4
-        else if (time_elapsed < 45) {
-            if(time_elapsed < 7.5) {
-                camera_cf = glm::translate(glm::vec3{(20.0f/7.5f/180*time_elapsed*M_PI)*FOOT,0,0}) * camera_cf;
-            }
-            else{
-                time_elapsed -= 7.5;
-                camera_cf = glm::translate(glm::vec3{(20.0f/180*M_PI)*FOOT,0,0}) * camera_cf;
-                camera_cf = glm::translate(glm::vec3{(-20.0f/7.5f/180*time_elapsed*M_PI)*FOOT,0,0}) * camera_cf;
-            }
-        }
-        //If returning to point 1
-        else {
-            time_elapsed -= 30;
-            camera_cf = original_camera_cf * glm::rotate(-160.0f/180 * (float)M_PI, glm::vec3{0,0,1});
-            camera_cf *= glm::rotate(-60.0f/180 * (float)M_PI, glm::vec3{0,1,0});
-            
-            if(time_elapsed < 5) {
-                camera_cf = glm::rotate(-180/5.0f/180 * (float)M_PI * time_elapsed, glm::vec3{0,0,1}) * camera_cf;
-            }
-            else {
-                time_elapsed -= 5;
-                camera_cf = glm::rotate(-180.0f/180 * (float)M_PI, glm::vec3{0,0,1}) * camera_cf;
-                camera_cf *= glm::rotate(-90.0f/10/180 * time_elapsed * (float) M_PI, glm::vec3{0,1,0});
-            }
-        }
-    }
 
     //    cout << __PRETTY_FUNCTION__ << endl;
     glClearColor(0, 0, 0, 1);
@@ -244,16 +210,68 @@ void win_refresh (GLFWwindow *win) {
         glPopMatrix();
     }
     
+    //render the moveable rams
+    vector<glm::mat4> moveable_rams = vector<glm::mat4>{ram1_cf, ram2_cf, ram3_cf, ram4_cf, ram5_cf};
+    for (auto ram_mtx : moveable_rams){
+        glPushMatrix();
+        glMultMatrixf (glm::value_ptr(ram_mtx));
+        ram.render(false);
+        glPopMatrix();
+    }
+    
     
     /* must swap buffer at the end of render function */
     glfwSwapBuffers(win);
+}
+
+void move_camera() {
+    time_elapsed += 0.5f;
+    if(time_elapsed > 60) {// if the time passes the end of the camera motion
+        time_elapsed = 0; // reset time
+    }
+    else {
+        //If moving to point 2
+        if(time_elapsed < 20) {
+            camera_cf = original_camera_cf * glm::rotate(-160.0f/20/180 * (float)M_PI * time_elapsed, glm::vec3{0,0,1});
+        }
+        //If moving to point 3
+        else if(time_elapsed < 30) {
+            camera_cf = original_camera_cf * glm::rotate(-160.0f/180 * (float)M_PI, glm::vec3{0,0,1});
+            camera_cf *= glm::rotate(-80.0f/10/180 * (float)M_PI * (time_elapsed - 20), glm::vec3{0,1,0});
+        }
+        //If moving to point 4
+        else if (time_elapsed < 45) {
+            camera_cf = original_camera_cf * glm::rotate(-160.0f/180 * (float)M_PI, glm::vec3{0,0,1});
+            camera_cf *= glm::rotate(-80.0f/180 * (float)M_PI, glm::vec3{0,1,0});
+            if(time_elapsed-30 < 7.5) {
+                camera_cf = glm::translate(glm::vec3{(40.0f/7.5f*(time_elapsed-30))*FOOT,0,0}) * camera_cf;
+            }
+            else{
+                camera_cf = glm::translate(glm::vec3{40.0f*FOOT,0,0}) * camera_cf;
+                camera_cf = glm::translate(glm::vec3{(-40.0f/7.5f*(time_elapsed-37.5))*FOOT,0,0}) * camera_cf;
+            }
+        }
+        //If returning to point 1
+        else {
+            camera_cf = original_camera_cf * glm::rotate(-160.0f/180 * (float)M_PI, glm::vec3{0,0,1});
+            camera_cf *= glm::rotate(-60.0f/180 * (float)M_PI, glm::vec3{0,1,0});
+            
+            if(time_elapsed < 5) {
+                camera_cf = glm::rotate(-180/5.0f/180 * (float)M_PI * (time_elapsed-45), glm::vec3{0,0,1}) * camera_cf;
+            }
+            else {
+                camera_cf = glm::rotate(-180.0f/180 * (float)M_PI, glm::vec3{0,0,1}) * camera_cf;
+                camera_cf *= glm::rotate(-90.0f/10/180 * (time_elapsed-50) * (float) M_PI, glm::vec3{0,1,0});
+            }
+        }
+    }
 }
 
 /* action: GLFW_PRESS, GLFW_RELEASE, or GLFW_REPEAT */
 void key_handler (GLFWwindow *win, int key, int scan_code, int action, int mods)
 {
     cout << __FUNCTION__ << endl;
-    if (action != GLFW_PRESS) win_refresh(win);
+    if (action != GLFW_PRESS);
     if (mods == GLFW_MOD_SHIFT) {
     }
     else {
@@ -269,76 +287,38 @@ void key_handler (GLFWwindow *win, int key, int scan_code, int action, int mods)
                 glPolygonMode(GL_FRONT, GL_FILL);
                 break;
             case GLFW_KEY_1:
+                curr_ram = &ram1_cf;
+                break;
             case GLFW_KEY_2:
+                curr_ram = &ram2_cf;
+                break;
             case GLFW_KEY_3:
+                curr_ram = &ram3_cf;
+                break;
             case GLFW_KEY_4:
+                curr_ram = &ram4_cf;
+                break;
             case GLFW_KEY_5:
-            case GLFW_KEY_6:
-                /* rebuild the model at different level of detail */
-                int N = key - GLFW_KEY_0;
-                //one.build((void *)&N);
+                curr_ram = &ram5_cf;
+                break;
+            case GLFW_KEY_UP:
+                *curr_ram = glm::translate(glm::vec3{0, -1.0 * FOOT, 0}) * (*curr_ram);
+                break;
+            case GLFW_KEY_DOWN:
+                (*curr_ram) = glm::translate(glm::vec3{0, 1.0 * FOOT, 0}) * (*curr_ram);
+                break;
+            case GLFW_KEY_RIGHT:
+                (*curr_ram) = glm::translate(glm::vec3{-1.0 * FOOT, 0, 0}) * (*curr_ram);
+                break;
+            case GLFW_KEY_LEFT:
+                (*curr_ram) = glm::translate(glm::vec3{1.0 * FOOT, 0, 0}) * (*curr_ram);
+                break;
+            case GLFW_KEY_SPACE:
+                move_camera();
                 break;
         }
     }
     win_refresh(win);
-}
-
-/*
- The virtual trackball technique implemented here is based on:
- https://www.opengl.org/wiki/Object_Mouse_Trackball
- */
-void cursor_handler (GLFWwindow *win, double xpos, double ypos) {
-    int state = glfwGetMouseButton(win, GLFW_MOUSE_BUTTON_LEFT);
-    static glm::vec3 first_click;
-    static glm::mat4 current_cam;
-    static bool is_tracking = false;
-    
-    glm::vec3 this_vec;
-    if (state == GLFW_PRESS) {
-        /* TODO: use glUnproject? */
-        float x = (xpos - screen_ctr_x);
-        float y = -(ypos - screen_ctr_y);
-        float hypot_square = x * x + y * y;
-        float z;
-        
-        /* determine whether the mouse is on the sphere or on the hyperbolic sheet */
-        if (2 * hypot_square < arc_ball_rad_square)
-            z = sqrt(arc_ball_rad_square - hypot_square);
-        else
-            z = arc_ball_rad_square / 2.0 / sqrt(hypot_square);
-        if (!is_tracking) {
-            /* store the mouse position when the button was pressed for the first time */
-            first_click = glm::normalize(glm::vec3{x, y, z});
-            current_cam = camera_cf;
-            is_tracking = true;
-        }
-        else {
-            /* compute the rotation w.r.t the initial click */
-            this_vec = glm::normalize(glm::vec3{x, y, z});
-            /* determine axis of rotation */
-            glm::vec3 N = glm::cross(first_click, this_vec);
-            
-            /* determine the angle of rotation */
-            float theta = glm::angle(first_click, this_vec);
-            
-            /* create a quaternion of the rotation */
-            glm::quat q{cos(theta / 2), sin(theta / 2) * N};
-            /* apply the rotation w.r.t to the current camera CF */
-            camera_cf = current_cam * glm::toMat4(glm::normalize(q));
-        }
-        win_refresh(win);
-    }
-    else {
-        is_tracking = false;
-    }
-}
-
-void scroll_handler (GLFWwindow *win, double xscroll, double yscroll) {
-    /* translate along the camera Z-axis */
-    glm::mat4 z_translate = glm::translate((float)yscroll * glm::vec3{0, 0, 1});
-    camera_cf =  z_translate * camera_cf;
-    win_refresh(win);
-    
 }
 
 void init_gl() {
@@ -357,6 +337,7 @@ void init_gl() {
 }
 
 void make_model() {
+    time_elapsed = 0;
     int N = 5;
     castle.build((void*)&N);
     tree.build((void*)&N);
@@ -368,6 +349,26 @@ void make_model() {
     projectile.setRadius(.5*FOOT);
     projectile.build((void*)&N);
     ground.build_with_params(2*FOOT, 400 * FOOT, 400 * FOOT, 0, 102, 0);
+    
+    //set up the original cf's for our moving rams
+    ram1_cf = glm::rotate(-90.0f/180 * (float)M_PI, glm::vec3{0, 0, 1}); //ram1
+    ram1_cf = glm::translate(glm::vec3{50 * FOOT, 100 * FOOT,0}) * ram1_cf;
+    
+    ram2_cf = glm::rotate(-90.0f/180 * (float)M_PI, glm::vec3{0, 0, 1}); //ram2
+    ram2_cf = glm::translate(glm::vec3{25 * FOOT, 100 * FOOT, 0}) * ram2_cf;
+    
+    ram3_cf = glm::rotate(-90.0f/180*(float)M_PI, glm::vec3{0, 0, 1}); //ram3
+    ram3_cf = glm::translate(glm::vec3{0 * FOOT, 100 * FOOT, 0}) * ram3_cf;
+    
+    ram4_cf = glm::rotate(-90.0f/180 * (float)M_PI, glm::vec3{0, 0, 1}); //ram4
+    ram4_cf = glm::translate(glm::vec3{-25 * FOOT, 100 * FOOT, 0}) * ram4_cf;
+    
+    ram5_cf = glm::rotate(-90.0f/180 * (float)M_PI, glm::vec3{0, 0, 1}); //ram5
+    ram5_cf = glm::translate(glm::vec3{-50 * FOOT, 100 * FOOT, 0}) * ram5_cf;
+    
+    //init the first ram to be ram1
+    curr_ram = &ram1_cf;
+    
     
     srand(clock());
     for(int i = 0; i < 25; i++) {
@@ -402,8 +403,8 @@ int main(){
     glfwSetWindowSizeCallback(win, win_resize);  /* use this for non-retina displays */
     //glfwSetFramebufferSizeCallback(win, win_resize); /* use this for retina displays */
     glfwSetKeyCallback(win, key_handler);
-    glfwSetCursorPosCallback(win, cursor_handler);
-    glfwSetScrollCallback(win, scroll_handler);
+//    glfwSetCursorPosCallback(win, cursor_handler);
+//    glfwSetScrollCallback(win, scroll_handler);
     glfwMakeContextCurrent(win);
     
     /* glewInit must be invoked AFTER glfwMakeContextCurrent() */
@@ -423,7 +424,6 @@ int main(){
     init_gl();
     make_model();
     
-    start_time = clock();
     win_refresh(win);
     while (!glfwWindowShouldClose(win)) {
         glfwWaitEvents();
